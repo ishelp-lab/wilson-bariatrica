@@ -100,19 +100,19 @@ export default function Procedures() {
   ];
 
   return (
-    <section id="procedimentos" className="py-24 relative overflow-hidden bg-section-darker border-b border-slate-800">
+    <section id="procedimentos" className="py-24 relative overflow-hidden bg-[#040c18] border-b border-blue-950/80">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Centered Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border-teal-500/40 text-teal-300 text-xs font-semibold uppercase tracking-wider shadow-lg">
-            <Stethoscope className="w-4 h-4 text-teal-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel-navy border-blue-500/40 text-sky-300 text-xs font-extrabold uppercase tracking-wider shadow-lg">
+            <Stethoscope className="w-4 h-4 text-sky-400" />
             <span>Especialidades Cirúrgicas</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-heading">
-            Procedimentos de <span className="text-gradient-teal">Alta Precisão</span>
+            Procedimentos de <span className="text-gradient-cyan">Alta Precisão</span>
           </h2>
 
           <p className="text-slate-300 text-base sm:text-lg">
@@ -127,36 +127,36 @@ export default function Procedures() {
             return (
               <div
                 key={proc.id}
-                className="p-8 rounded-3xl glass-panel glass-card-hover border border-slate-800 flex flex-col justify-between group bg-slate-900/80"
+                className="p-8 rounded-3xl bg-[#081c3c] border border-blue-800/60 flex flex-col justify-between group glass-card-hover"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-400/40 flex items-center justify-center text-sky-300 group-hover:scale-110 transition-transform duration-300">
                       <Icon className="w-7 h-7" />
                     </div>
-                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-teal-300 border border-slate-700">
+                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-950 text-sky-300 border border-blue-700/60">
                       {proc.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold font-heading text-white mb-2 group-hover:text-teal-300 transition-colors">
+                  <h3 className="text-xl font-bold font-heading text-white mb-2 group-hover:text-sky-300 transition-colors">
                     {proc.title}
                   </h3>
 
-                  <p className="text-xs font-medium text-teal-400 mb-4">{proc.subtitle}</p>
+                  <p className="text-xs font-semibold text-sky-400 mb-4">{proc.subtitle}</p>
                   
                   <p className="text-sm text-slate-300 leading-relaxed mb-6">
                     {proc.summary}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-slate-800/80">
+                <div className="pt-4 border-t border-blue-900/60">
                   <button
                     onClick={() => setSelectedProcedure(proc)}
-                    className="w-full inline-flex items-center justify-between px-4 py-3 rounded-xl bg-slate-800/80 hover:bg-teal-500/20 text-slate-200 hover:text-teal-300 text-xs font-bold transition-all border border-slate-700 hover:border-teal-500/40"
+                    className="w-full inline-flex items-center justify-between px-4 py-3 rounded-xl bg-blue-950/80 hover:bg-blue-600 text-slate-200 hover:text-white text-xs font-bold transition-all border border-blue-800 hover:border-blue-400/50"
                   >
                     <span>Ver Detalhes do Procedimento</span>
-                    <ArrowRight className="w-4 h-4 text-teal-400 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 text-sky-300 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
               </div>

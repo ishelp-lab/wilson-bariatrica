@@ -3,39 +3,73 @@
 @layer base {
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #040c18;
+    color: #f1f5f9;
   }
   h1, h2, h3, h4, h5, h6, .font-heading {
     font-family: 'Outfit', sans-serif;
   }
+  .font-signature {
+    font-family: 'Alex Brush', cursive;
+  }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar in Deep Navy Blue */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #040c18;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0d9488;
+  background: #1d4ed8;
   border-radius: 4px;
 }
 
-/* Glassmorphism Styles (Dark) */
-.glass-panel {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
 }
 
-.glass-card {
-  background: rgba(30, 41, 59, 0.4);
+/* Custom Brand Palette Background Utilities */
+.bg-brand-dark {
+  background-color: #040c18;
+}
+
+.bg-brand-navy {
+  background-color: #07152b;
+}
+
+.bg-brand-card {
+  background-color: #0a1c38;
+}
+
+.bg-gradient-brand-dark {
+  background: linear-gradient(135deg, #030a16 0%, #07162e 50%, #0d2547 100%);
+}
+
+.bg-gradient-brand-blue {
+  background: linear-gradient(135deg, #091e3e 0%, #11396b 50%, #1a5499 100%);
+}
+
+.bg-gradient-hero-overlay {
+  background: linear-gradient(180deg, rgba(4, 12, 24, 0.95) 0%, rgba(4, 12, 24, 0.4) 60%, rgba(4, 12, 24, 0.95) 100%);
+}
+
+/* Glassmorphism Presets inspired by Instagram overlays */
+.glass-panel-navy {
+  background: rgba(10, 27, 54, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-card-navy {
+  background: rgba(13, 35, 70, 0.5);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 .glass-card-hover {
@@ -43,34 +77,59 @@
 }
 
 .glass-card-hover:hover {
-  background: rgba(30, 41, 59, 0.85);
-  border-color: rgba(20, 184, 166, 0.35);
-  box-shadow: 0 20px 40px -15px rgba(20, 184, 166, 0.2);
+  background: rgba(15, 42, 84, 0.85);
+  border-color: rgba(59, 130, 246, 0.45);
+  box-shadow: 0 20px 45px -15px rgba(37, 99, 235, 0.3);
   transform: translateY(-6px);
 }
 
-/* Light Section Cards */
-.light-card-hover {
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.light-card-hover:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.08);
-  border-color: rgba(20, 184, 166, 0.4);
+/* White Glassmorphism Overlay (Like Image 4) */
+.glass-panel-light-overlay {
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 /* Gradient Text Utilities */
-.text-gradient-teal {
-  background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 50%, #0d9488 100%);
+.text-gradient-blue {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #1d4ed8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-emerald-dark {
-  background: linear-gradient(135deg, #0f766e 0%, #0d9488 50%, #047857 100%);
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #e0f2fe 0%, #38bdf8 50%, #2563eb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-white {
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Instagram Post Headline Underline Accent */
+.underline-accent {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-accent::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 2px;
+}
+
+/* Ascending Trend Arrow Line Background Pattern (Inspired by Image 3) */
+.bg-trend-graph {
+  background-image: radial-gradient(circle at top right, rgba(37, 99, 235, 0.15), transparent 60%);
 }
 
 /* Animations */
@@ -81,7 +140,7 @@
 
 @keyframes pulseGlow {
   0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.03); }
+  50% { opacity: 0.7; transform: scale(1.04); }
 }
 
 .animate-float-slow {

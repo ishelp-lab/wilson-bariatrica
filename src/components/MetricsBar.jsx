@@ -30,7 +30,7 @@ export default function MetricsBar() {
   ];
 
   return (
-    <section className="py-14 relative z-20 bg-white border-b border-slate-200 shadow-sm text-slate-800">
+    <section className="py-14 relative z-20 bg-[#07152b] border-y border-blue-950/80 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -39,17 +39,17 @@ export default function MetricsBar() {
             return (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-xl hover:border-teal-500/30 transition-all duration-300 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left group"
+                className="p-6 rounded-2xl bg-[#081c3c] border border-blue-800/60 hover:bg-[#0a234a] hover:border-blue-500/50 transition-all duration-300 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left group shadow-lg"
               >
-                <div className="w-14 h-14 rounded-2xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-600 shrink-0 group-hover:scale-110 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                <div className="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-400/40 flex items-center justify-center text-sky-300 shrink-0 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
                   <Icon className="w-7 h-7" />
                 </div>
                 <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 tracking-tight">
+                  <div className="text-2xl sm:text-3xl font-extrabold font-heading text-white tracking-tight">
                     {metric.value}
                   </div>
-                  <h3 className="text-xs font-bold text-slate-700 uppercase tracking-wider mt-0.5">{metric.label}</h3>
-                  <p className="text-xs text-slate-500 mt-0.5">{metric.sublabel}</p>
+                  <h3 className="text-xs font-bold text-sky-300 uppercase tracking-wider mt-0.5">{metric.label}</h3>
+                  <p className="text-xs text-slate-300 mt-0.5">{metric.sublabel}</p>
                 </div>
               </div>
             );

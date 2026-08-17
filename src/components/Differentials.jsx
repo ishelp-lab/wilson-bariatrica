@@ -42,22 +42,25 @@ export default function Differentials() {
   ];
 
   return (
-    <section id="diferenciais" className="py-24 relative overflow-hidden bg-white border-b border-slate-200">
+    <section id="diferenciais" className="py-24 relative overflow-hidden bg-[#07152b] border-b border-blue-950/80">
       
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/3 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[160px] pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Centered Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-xs font-bold uppercase tracking-wider shadow-sm">
-            <Zap className="w-4 h-4 text-teal-600" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel-navy border-blue-500/40 text-sky-300 text-xs font-extrabold uppercase tracking-wider shadow-sm">
+            <Zap className="w-4 h-4 text-sky-400" />
             <span>Por que Escolher o Dr. Wilson</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-heading">
-            Diferenciais de <span className="text-gradient-emerald-dark">Segurança & Excelência</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-heading">
+            Diferenciais de <span className="text-gradient-cyan">Segurança & Excelência</span>
           </h2>
 
-          <p className="text-slate-600 text-base sm:text-lg">
+          <p className="text-slate-300 text-base sm:text-lg">
             Combinamos inovação científica, cirurgias minimamente invasivas e atenção humanizada para garantir uma jornada cirúrgica tranquila.
           </p>
         </div>
@@ -69,22 +72,22 @@ export default function Differentials() {
             return (
               <div
                 key={idx}
-                className="p-8 rounded-3xl bg-slate-50 border border-slate-200/90 light-card-hover hover:bg-white space-y-4 group"
+                className="p-8 rounded-3xl bg-[#081c3c] border border-blue-800/60 glass-card-hover space-y-4 group"
               >
                 <div className="flex items-center justify-between">
-                  <div className="w-14 h-14 rounded-2xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                  <div className="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-400/40 flex items-center justify-center text-sky-300 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
                     <Icon className="w-7 h-7" />
                   </div>
-                  <span className="text-xs font-bold text-teal-800 bg-teal-100 px-3 py-1 rounded-full border border-teal-200">
+                  <span className="text-xs font-bold text-sky-300 bg-blue-950 px-3 py-1 rounded-full border border-blue-700/60">
                     {item.tag}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold font-heading text-slate-900 group-hover:text-teal-700 transition-colors">
+                <h3 className="text-xl font-bold font-heading text-white group-hover:text-sky-300 transition-colors">
                   {item.title}
                 </h3>
 
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-slate-300 leading-relaxed">
                   {item.desc}
                 </p>
               </div>
