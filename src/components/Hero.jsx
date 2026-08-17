@@ -1,11 +1,12 @@
 import React from 'react';
 import { ShieldCheck, Award, Calendar, Calculator, CheckCircle2, Star, ArrowRight, Shield, TrendingUp } from 'lucide-react';
+import BrandLogo from './BrandLogo';
 
 export default function Hero() {
   const whatsappUrl = "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20cirurgia%20bari%C3%A1trica%20com%20o%20Dr.%20Wilson%20Paulo%20dos%20Santos.";
 
   return (
-    <section id="inicio" className="relative pt-32 pb-24 md:pt-40 md:pb-36 bg-[#040c18] overflow-hidden border-b border-blue-950/80">
+    <section id="inicio" className="relative pt-8 pb-24 md:pt-12 md:pb-36 bg-[#040c18] overflow-hidden border-b border-blue-950/80">
       
       {/* Radial Blue Glows (Instagram Accent Lighting) */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/15 rounded-full blur-[160px] pointer-events-none" />
@@ -36,15 +37,31 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Top Centered Announcement Badge (Instagram Style Pill) */}
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-panel-navy text-sky-200 text-xs sm:text-sm font-semibold tracking-wide shadow-xl hover:border-blue-400/50 transition-all cursor-pointer">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
-            </span>
-            <Award className="w-4 h-4 text-sky-400" />
-            <span>Dr. Wilson Paulo dos Santos • Cirurgia Bariátrica & Metabólica</span>
+        {/* Top Native Brand Logo Header */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-blue-900/30">
+          <BrandLogo variant="white" className="scale-125 sm:scale-135 md:scale-150 origin-center sm:origin-left py-2 sm:py-0" />
+          
+          <div className="flex items-center gap-4">
+            {/* Rating / Trust pill */}
+            <div className="hidden md:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/80 border border-amber-500/30 text-xs text-slate-200">
+              <div className="flex text-amber-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
+                ))}
+              </div>
+              <span className="font-bold text-amber-300">4.9/5</span>
+              <span className="text-slate-400">| +500 avaliações</span>
+            </div>
+
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-600/30 hover:shadow-blue-500/50 transition-all border border-blue-400/30"
+            >
+              <Calendar className="w-4 h-4 text-sky-200" />
+              <span>Agendar Consulta</span>
+            </a>
           </div>
         </div>
 

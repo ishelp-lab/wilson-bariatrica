@@ -36,49 +36,49 @@ export default function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="py-24 relative overflow-hidden bg-[#040c18] border-b border-blue-950/80">
+    <section id="faq" className="py-24 relative overflow-hidden bg-slate-50 border-b border-slate-200">
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Centered Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel-navy border-blue-500/40 text-sky-300 text-xs font-extrabold uppercase tracking-wider shadow-lg">
-            <HelpCircle className="w-4 h-4 text-sky-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-900 text-xs font-extrabold uppercase tracking-wider shadow-sm">
+            <HelpCircle className="w-4 h-4 text-blue-700" />
             <span>Tire Suas Dúvidas</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-heading">
-            Perguntas <span className="text-gradient-cyan">Frequentes</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-heading">
+            Perguntas <span className="text-blue-700">Frequentes</span>
           </h2>
 
-          <p className="text-slate-300 text-base sm:text-lg">
+          <p className="text-slate-600 text-base sm:text-lg font-medium">
             Respostas transparentes sobre indicações, procedimentos, planos de saúde e recuperação pós-operatória.
           </p>
         </div>
 
         {/* FAQ Accordions */}
-        <div className="space-y-4">
+        <div className="space-y-3.5">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-[#081c3c] border border-blue-800/60 overflow-hidden transition-all duration-200"
+                className="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm transition-all duration-200 hover:border-blue-300"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? -1 : idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-blue-950/40 transition-colors"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-slate-50 transition-colors"
                 >
-                  <span className="text-base sm:text-lg font-bold text-white font-heading">
+                  <span className="text-base sm:text-lg font-bold text-slate-900 font-heading">
                     {faq.q}
                   </span>
-                  <div className={`w-8 h-8 rounded-full bg-blue-950 border border-blue-800 flex items-center justify-center text-sky-300 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-blue-600/30 text-sky-200 border-blue-400/40' : ''}`}>
+                  <div className={`w-8 h-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-blue-600 text-white border-blue-600' : ''}`}>
                     <ChevronDown className="w-5 h-5" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-2 text-slate-300 text-sm leading-relaxed border-t border-blue-900/60 animate-in fade-in duration-200">
+                  <div className="px-6 pb-6 pt-2 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 animate-in fade-in duration-200">
                     <p>{faq.a}</p>
                   </div>
                 )}
@@ -88,18 +88,18 @@ export default function FAQSection() {
         </div>
 
         {/* FAQ Help Callout */}
-        <div className="mt-12 text-center p-6 rounded-2xl bg-[#07162e] border border-blue-800/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 text-center p-6 rounded-2xl bg-white border border-slate-200 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-center sm:text-left">
-            <h4 className="text-white font-bold text-base font-heading">Sua dúvida não está listada acima?</h4>
-            <p className="text-xs text-slate-300">Nossa equipe de atendimento esclarece qualquer pergunta no WhatsApp.</p>
+            <h4 className="text-slate-900 font-bold text-base font-heading">Sua dúvida não está listada acima?</h4>
+            <p className="text-xs text-slate-500">Nossa equipe de atendimento esclarece qualquer pergunta no WhatsApp.</p>
           </div>
           <a
             href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20espec%C3%ADfica%20sobre%20a%20cirurgia."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600/30 hover:bg-blue-600/50 text-sky-200 border border-blue-400/40 font-semibold text-xs transition-colors shrink-0"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs transition-colors shrink-0 shadow-md shadow-emerald-500/20"
           >
-            <MessageCircle className="w-4 h-4 text-sky-300" />
+            <MessageCircle className="w-4 h-4" />
             <span>Falar com Atendimento</span>
           </a>
         </div>

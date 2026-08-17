@@ -12,44 +12,30 @@ export default function Footer() {
   return (
     <footer className="bg-[#030a16] border-t border-blue-950/80 text-slate-400 py-16 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-blue-900/40">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-blue-900/40 items-center">
           
           {/* Col 1: Brand & Credentials */}
-          <div className="md:col-span-5 space-y-4">
+          <div className="md:col-span-7 space-y-4">
             <a href="#inicio" className="inline-block">
               <BrandLogo variant="white" />
             </a>
 
-            <p className="text-xs text-slate-300 leading-relaxed max-w-sm pt-2">
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl">
               Dr. Wilson Paulo dos Santos — Especialista em Cirurgia Bariátrica, Metabólica e Videolaparoscópica de Alta Precisão. Atendimento presencial em São Paulo e Telemedicina para todo o Brasil.
             </p>
 
-            <div className="flex items-center gap-3 text-xs text-slate-200 pt-1">
-              <span className="px-2.5 py-1 rounded-md bg-blue-950 border border-blue-800 font-medium">CRM-SP 145.890</span>
-              <span className="px-2.5 py-1 rounded-md bg-blue-950 border border-blue-800 font-medium">RQE 78.432</span>
-              <span className="px-2.5 py-1 rounded-md bg-blue-900/40 border border-blue-500/40 font-medium text-sky-300">SBCBM / IFSO</span>
+            <div className="flex flex-wrap items-center gap-3 text-xs text-slate-200 pt-1">
+              <span className="px-3 py-1.5 rounded-lg bg-blue-950 border border-blue-800 font-semibold">CRM-SP 145.890</span>
+              <span className="px-3 py-1.5 rounded-lg bg-blue-950 border border-blue-800 font-semibold">RQE 78.432</span>
+              <span className="px-3 py-1.5 rounded-lg bg-blue-900/40 border border-blue-500/40 font-semibold text-sky-300">Membro Titular SBCBM & IFSO</span>
             </div>
           </div>
 
-          {/* Col 2: Quick Links */}
-          <div className="md:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold text-white font-heading">Navegação</h4>
-            <ul className="space-y-2 text-xs">
-              <li><a href="#inicio" className="hover:text-sky-300 transition-colors">Início</a></li>
-              <li><a href="#transformacoes" className="hover:text-sky-300 transition-colors">Antes & Depois</a></li>
-              <li><a href="#sobre" className="hover:text-sky-300 transition-colors">Sobre o Médico</a></li>
-              <li><a href="#calculadora" className="hover:text-sky-300 transition-colors">Calculadora IMC</a></li>
-              <li><a href="#procedimentos" className="hover:text-sky-300 transition-colors">Procedimentos Cirúrgicos</a></li>
-              <li><a href="#diferenciais" className="hover:text-sky-300 transition-colors">Diferenciais & ERAS</a></li>
-              <li><a href="#faq" className="hover:text-sky-300 transition-colors">Perguntas Frequentes</a></li>
-            </ul>
-          </div>
-
-          {/* Col 3: Legal Disclaimers & CFM Compliance */}
-          <div className="md:col-span-4 space-y-3">
-            <h4 className="text-sm font-bold text-white font-heading">Aviso Ético & Regulatório</h4>
+          {/* Col 2: Legal Disclaimers & CFM Compliance */}
+          <div className="md:col-span-5 space-y-3 p-5 rounded-2xl bg-blue-950/40 border border-blue-900/50">
+            <h4 className="text-xs font-bold text-sky-400 uppercase tracking-wider font-heading">Aviso Ético & Regulatório (CFM)</h4>
             <p className="text-[11px] text-slate-400 leading-relaxed">
-              As informações contidas neste site possuem caráter estritamente educativo e informativo, obedecendo às Resoluções do Conselho Federal de Medicina (CFM). Nenhuma informação aqui veiculada substitui a consulta médica presencial ou a avaliação técnica individualizada.
+              As informações veiculadas possuem caráter informativo e educacional, em conformidade com as diretrizes éticas do Conselho Federal de Medicina (CFM). Nenhuma informação substitui a consulta médica presencial e a avaliação clínica individualizada.
             </p>
           </div>
 

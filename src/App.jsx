@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MetricsBar from './components/MetricsBar';
 import AboutDoctor from './components/AboutDoctor';
@@ -16,7 +15,6 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-teal-500 selection:text-white">
-      <Navbar />
       <main>
         <Hero />
         <MetricsBar />

@@ -20,22 +20,20 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Início', href: '#inicio' },
-    { name: 'Transformações', href: '#transformacoes' },
-    { name: 'Sobre o Médico', href: '#sobre' },
-    { name: 'Calculadora IMC', href: '#calculadora' },
-    { name: 'Procedimentos', href: '#procedimentos' },
-    { name: 'Contato', href: '#contato' },
+    { name: 'INÍCIO', href: '#inicio' },
+    { name: 'TRANSFORMAÇÕES', href: '#transformacoes' },
+    { name: 'SOBRE O DR. WILSON', href: '#sobre' },
+    { name: 'CALCULADORA IMC', href: '#calculadora' },
+    { name: 'CONTATO', href: '#contato' },
   ];
 
   const whatsappLink = "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Wilson%20Paulo%20dos%20Santos.";
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled
-        ? 'bg-[#040c18]/90 backdrop-blur-md py-3 shadow-2xl border-b border-blue-900/40'
-        : 'bg-transparent py-5'
-    }`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+      ? 'bg-[#040c18]/90 backdrop-blur-md py-3 shadow-2xl border-b border-blue-900/40'
+      : 'bg-transparent py-5'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
 
@@ -66,7 +64,7 @@ export default function Navbar() {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white font-semibold text-sm shadow-lg shadow-blue-600/30 hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-0.5 border border-blue-400/30"
             >
               <Calendar className="w-4 h-4 text-sky-200" />
-              <span>Agendar Consulta</span>
+              <span>AGENDAR AVALIAÇÃO</span>
             </a>
           </div>
 

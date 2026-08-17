@@ -47,14 +47,14 @@ export default function Testimonials() {
   const current = transformations[activeTab];
 
   return (
-    <section id="transformacoes" className="py-24 relative overflow-hidden bg-[#040c18] border-b border-blue-950/80">
+    <section id="transformacoes" className="py-24 relative overflow-hidden bg-slate-100 border-b border-slate-200">
       
-      {/* Background Radial Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none" />
+      {/* Background Subtle Radial Accent */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-500/10 rounded-full blur-[150px] pointer-events-none" />
 
       {/* Watermark Background Text (Inspired by Instagram Post 4) */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden opacity-5">
-        <span className="text-[18vw] font-black uppercase text-white tracking-widest font-heading whitespace-nowrap">
+        <span className="text-[18vw] font-black uppercase text-blue-950 tracking-widest font-heading whitespace-nowrap">
           TRANSFORMAÇÃO
         </span>
       </div>
@@ -63,22 +63,22 @@ export default function Testimonials() {
         
         {/* Centered Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel-navy border-blue-500/40 text-sky-300 text-xs font-extrabold uppercase tracking-wider shadow-lg">
-            <Sparkles className="w-4 h-4 text-sky-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-200/60 border border-blue-300 text-blue-900 text-xs font-extrabold uppercase tracking-wider shadow-sm">
+            <Sparkles className="w-4 h-4 text-blue-700" />
             <span>Casos Reais • Antes & Depois</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-heading leading-tight">
-            Histórias de <span className="text-gradient-cyan">Superação & Saúde</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-heading leading-tight">
+            Histórias de <span className="text-blue-700">Superação & Saúde</span>
           </h2>
 
-          <p className="text-slate-300 text-base sm:text-lg">
+          <p className="text-slate-600 text-base sm:text-lg font-medium">
             Inspire-se com os resultados de pacientes que passaram pelo protocolo cirúrgico do Dr. Wilson Paulo dos Santos.
           </p>
         </div>
 
         {/* Instagram Post #1 Inspired Main Showcase Card */}
-        <div className="max-w-5xl mx-auto bg-[#07162e] rounded-3xl p-6 sm:p-10 border border-blue-800/60 shadow-2xl relative overflow-hidden">
+        <div className="max-w-5xl mx-auto bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl relative overflow-hidden">
           
           <div className="grid lg:grid-cols-12 gap-8 items-center">
             
@@ -147,51 +147,51 @@ export default function Testimonials() {
             <div className="lg:col-span-5 space-y-6 text-left">
               
               <div>
-                <div className="inline-block px-3 py-1 rounded-full bg-blue-900/50 border border-blue-500/40 text-sky-300 text-xs font-bold mb-3">
+                <div className="inline-block px-3.5 py-1 rounded-full bg-blue-100 border border-blue-200 text-blue-900 text-xs font-bold mb-3">
                   {current.procedure}
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-heading">
-                  {current.patientName} <span className="text-sm font-normal text-slate-400">({current.age})</span>
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
+                  {current.patientName} <span className="text-sm font-normal text-slate-500">({current.age})</span>
                 </h3>
               </div>
 
               {/* Stats Highlights */}
               <div className="grid grid-cols-2 gap-3">
-                <div className="p-3.5 rounded-2xl bg-[#091e3d] border border-blue-800/50">
-                  <span className="text-xs text-slate-400 block font-medium">Eliminação de Peso</span>
-                  <span className="text-2xl font-extrabold font-heading text-sky-400">{current.weightLoss}</span>
+                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                  <span className="text-xs text-slate-500 block font-medium">Eliminação de Peso</span>
+                  <span className="text-2xl font-extrabold font-heading text-blue-700">{current.weightLoss}</span>
                 </div>
-                <div className="p-3.5 rounded-2xl bg-[#091e3d] border border-blue-800/50">
-                  <span className="text-xs text-slate-400 block font-medium">Tempo de Evolução</span>
-                  <span className="text-2xl font-extrabold font-heading text-white">{current.timeframe}</span>
+                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                  <span className="text-xs text-slate-500 block font-medium">Tempo de Evolução</span>
+                  <span className="text-2xl font-extrabold font-heading text-slate-900">{current.timeframe}</span>
                 </div>
               </div>
 
               {/* Health Gains Pill */}
-              <div className="p-4 rounded-2xl bg-blue-950/80 border border-blue-700/50 space-y-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-sky-300 block">
+              <div className="p-4 rounded-2xl bg-blue-50 border border-blue-200 space-y-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-blue-800 block">
                   Ganho Metabólico de Saúde
                 </span>
-                <p className="text-sm font-semibold text-slate-200">
+                <p className="text-sm font-semibold text-slate-800">
                   {current.healthGains}
                 </p>
               </div>
 
               {/* Patient Quote */}
-              <p className="text-slate-300 text-sm leading-relaxed italic bg-blue-900/20 p-4 rounded-xl border border-blue-800/30">
+              <p className="text-slate-700 text-sm leading-relaxed italic bg-slate-50 p-4 rounded-xl border border-slate-200">
                 "{current.testimonial}"
               </p>
 
               {/* Tab Selector Controls */}
               <div className="pt-2 flex items-center justify-between">
-                <span className="text-xs text-slate-400 font-medium">
+                <span className="text-xs text-slate-500 font-medium">
                   Caso {activeTab + 1} de {transformations.length}
                 </span>
 
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => setActiveTab((prev) => (prev === 0 ? transformations.length - 1 : prev - 1))}
-                    className="p-2.5 rounded-xl bg-blue-950 hover:bg-blue-900 border border-blue-800 text-slate-200 hover:text-white transition-colors"
+                    className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 transition-colors"
                     aria-label="Anterior"
                   >
                     <ChevronLeft className="w-5 h-5" />
@@ -199,7 +199,7 @@ export default function Testimonials() {
 
                   <button
                     onClick={() => setActiveTab((prev) => (prev === transformations.length - 1 ? 0 : prev + 1))}
-                    className="p-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/30 transition-colors"
+                    className="p-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/30 transition-colors"
                     aria-label="Próximo"
                   >
                     <ChevronRight className="w-5 h-5" />
