@@ -22,7 +22,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'INÍCIO', href: '#inicio' },
     { name: 'TRANSFORMAÇÕES', href: '#transformacoes' },
-    { name: 'SOBRE O DR. WILSON', href: '#sobre' },
+    { name: 'SOBRE MIM', href: '#sobre' },
     { name: 'CALCULADORA IMC', href: '#calculadora' },
     { name: 'CONTATO', href: '#contato' },
   ];

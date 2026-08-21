@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
-import { Star, MessageSquare, ArrowRight, ShieldCheck, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
+import React from 'react';
+import { ShieldCheck, Sparkles, Quote, Award } from 'lucide-react';
 
 export default function Testimonials() {
-  const [activeTab, setActiveTab] = useState(0);
-
-  // Transformations inspired by Instagram Post #1
   const transformations = [
     {
       id: 1,
@@ -28,7 +25,7 @@ export default function Testimonials() {
       healthGains: 'Cura da Apneia do Sono & Alívio de Dores Articulares',
       antesImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800',
       depoisImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800',
-      testimonial: 'Operar por videolaparoscopia com furos milimétricos facilitou muito minha recuperação. Em 24 horas já estava em casa. Voltei a correr e praticar esportes com meus filhos.',
+      testimonial: 'Operar por videolaparoscopia com furos milimétricos facilitou muito minha recuperação. Em 24 horas já estava em casa. Voltei a praticar esportes com meus filhos.',
     },
     {
       id: 3,
@@ -44,15 +41,13 @@ export default function Testimonials() {
     },
   ];
 
-  const current = transformations[activeTab];
-
   return (
     <section id="transformacoes" className="py-24 relative overflow-hidden bg-slate-100 border-b border-slate-200">
       
       {/* Background Subtle Radial Accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-500/10 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-blue-500/10 rounded-full blur-[180px] pointer-events-none" />
 
-      {/* Watermark Background Text (Inspired by Instagram Post 4) */}
+      {/* Watermark Background Text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden opacity-5">
         <span className="text-[18vw] font-black uppercase text-blue-950 tracking-widest font-heading whitespace-nowrap">
           TRANSFORMAÇÃO
@@ -73,147 +68,124 @@ export default function Testimonials() {
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg font-medium">
-            Inspire-se com os resultados de pacientes que passaram pelo protocolo cirúrgico do Dr. Wilson Paulo dos Santos.
+            Confira a evolução real e o ganho de qualidade de vida de pacientes tratados pelo Dr. Wilson Paulo dos Santos.
           </p>
         </div>
 
-        {/* Instagram Post #1 Inspired Main Showcase Card */}
-        <div className="max-w-5xl mx-auto bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl relative overflow-hidden">
-          
-          <div className="grid lg:grid-cols-12 gap-8 items-center">
-            
-            {/* Left Side: Before & After Split Image Frame (Matching Instagram Image 1) */}
-            <div className="lg:col-span-7 relative">
-              <div className="bg-[#050f21] p-3 sm:p-4 rounded-2xl border border-blue-900/80 shadow-2xl">
+        {/* Grid Displaying All 3 Transformation Cards Simultaneously */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {transformations.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white rounded-3xl p-6 border border-slate-200 shadow-xl flex flex-col justify-between hover:shadow-2xl hover:border-blue-300 transition-all duration-300 group"
+            >
+              <div className="space-y-5">
                 
-                {/* Header Labels (Antes & Depois) */}
-                <div className="grid grid-cols-2 gap-3 mb-3">
-                  <div className="py-2 text-center bg-[#091b3b] rounded-xl border border-blue-800/60 text-white font-heading font-extrabold text-lg sm:text-xl tracking-wide shadow-md">
-                    Antes
-                  </div>
-                  <div className="py-2 text-center bg-blue-600 rounded-xl text-white font-heading font-extrabold text-lg sm:text-xl tracking-wide shadow-md">
-                    Depois
-                  </div>
-                </div>
-
-                {/* Split Photos */}
-                <div className="grid grid-cols-2 gap-3 relative rounded-xl overflow-hidden">
+                {/* Dark Frame Container for Before & After Images */}
+                <div className="bg-[#050f21] p-3 rounded-2xl border border-blue-900/80 shadow-lg">
                   
-                  {/* Antes Photo Frame */}
-                  <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-white/10 group">
-                    <img
-                      src={current.antesImg}
-                      alt={`Paciente ${current.patientName} Antes da Cirurgia`}
-                      className="w-full h-full object-cover object-center filter contrast-[1.05]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                    <span className="absolute bottom-2.5 left-2.5 text-[11px] font-bold text-amber-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm">
-                      Pré-Operatório
-                    </span>
-                  </div>
-
-                  {/* Depois Photo Frame */}
-                  <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-blue-400/40 group">
-                    <img
-                      src={current.depoisImg}
-                      alt={`Paciente ${current.patientName} Depois da Cirurgia`}
-                      className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-950/80 via-transparent to-transparent" />
-                    <span className="absolute bottom-2.5 right-2.5 text-[11px] font-bold text-sky-200 bg-blue-600/80 px-2 py-0.5 rounded backdrop-blur-sm shadow-md">
-                      {current.weightLoss} • {current.timeframe}
-                    </span>
-                  </div>
-
-                </div>
-
-                {/* Dr. Wilson Footer Logo Watermark (Matching Instagram Image 1 bottom watermark) */}
-                <div className="mt-4 pt-3 border-t border-blue-900/60 flex items-center justify-between px-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-lg bg-blue-600/30 flex items-center justify-center text-sky-300">
-                      <ShieldCheck className="w-4 h-4" />
+                  {/* Header Labels (Antes & Depois) */}
+                  <div className="grid grid-cols-2 gap-2 mb-2">
+                    <div className="py-1.5 text-center bg-[#091b3b] rounded-lg border border-blue-800/60 text-white font-heading font-extrabold text-xs sm:text-sm tracking-wide">
+                      Antes
                     </div>
-                    <span className="font-signature text-xl text-white">Dr. Wilson Paulo dos Santos</span>
+                    <div className="py-1.5 text-center bg-blue-600 rounded-lg text-white font-heading font-extrabold text-xs sm:text-sm tracking-wide">
+                      Depois
+                    </div>
                   </div>
-                  <span className="text-[10px] font-extrabold text-blue-300 uppercase tracking-widest">
-                    Cirurgia Bariátrica
+
+                  {/* Split Photos */}
+                  <div className="grid grid-cols-2 gap-2 relative rounded-xl overflow-hidden">
+                    
+                    {/* Antes Photo Frame */}
+                    <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10">
+                      <img
+                        src={item.antesImg}
+                        alt={`Paciente ${item.patientName} Antes`}
+                        className="w-full h-full object-cover object-center filter contrast-[1.05]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                      <span className="absolute bottom-2 left-2 text-[10px] font-bold text-amber-300 bg-black/70 px-1.5 py-0.5 rounded backdrop-blur-sm">
+                        Pré-Op
+                      </span>
+                    </div>
+
+                    {/* Depois Photo Frame */}
+                    <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-blue-400/40">
+                      <img
+                        src={item.depoisImg}
+                        alt={`Paciente ${item.patientName} Depois`}
+                        className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-blue-950/80 via-transparent to-transparent" />
+                      <span className="absolute bottom-2 right-2 text-[10px] font-bold text-sky-100 bg-blue-600/90 px-1.5 py-0.5 rounded backdrop-blur-sm shadow-sm">
+                        {item.weightLoss}
+                      </span>
+                    </div>
+
+                  </div>
+
+                  {/* Doctor Seal Watermark */}
+                  <div className="mt-3 pt-2 border-t border-blue-900/60 flex items-center justify-between px-1">
+                    <div className="flex items-center gap-1.5">
+                      <ShieldCheck className="w-3.5 h-3.5 text-sky-400" />
+                      <span className="font-signature text-base text-white">Dr. Wilson Paulo</span>
+                    </div>
+                    <span className="text-[9px] font-bold text-sky-300 uppercase tracking-wider">
+                      {item.timeframe}
+                    </span>
+                  </div>
+
+                </div>
+
+                {/* Patient Information Header */}
+                <div>
+                  <span className="inline-block text-[11px] font-bold text-blue-800 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200 mb-2">
+                    {item.procedure}
                   </span>
+                  <h3 className="text-xl font-extrabold text-slate-900 font-heading">
+                    {item.patientName} <span className="text-xs font-normal text-slate-500">({item.age})</span>
+                  </h3>
+                </div>
+
+                {/* Stats Row */}
+                <div className="grid grid-cols-2 gap-2 text-center">
+                  <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+                    <span className="text-[11px] text-slate-500 block font-medium">Perda de Peso</span>
+                    <span className="text-lg font-extrabold font-heading text-blue-700">{item.weightLoss}</span>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+                    <span className="text-[11px] text-slate-500 block font-medium">Tempo de Evolução</span>
+                    <span className="text-lg font-extrabold font-heading text-slate-900">{item.timeframe}</span>
+                  </div>
+                </div>
+
+                {/* Metabolic Health Benefit */}
+                <div className="p-3 rounded-xl bg-blue-50/80 border border-blue-200 space-y-1">
+                  <div className="flex items-center gap-1.5 text-blue-800 text-[10px] font-bold uppercase tracking-wider">
+                    <Award className="w-3.5 h-3.5 text-blue-700" />
+                    <span>Ganho de Saúde</span>
+                  </div>
+                  <p className="text-xs font-semibold text-slate-800">
+                    {item.healthGains}
+                  </p>
+                </div>
+
+                {/* Patient Quote */}
+                <div className="relative pt-2">
+                  <Quote className="w-6 h-6 text-blue-200 absolute -top-1 left-0 opacity-40 pointer-events-none" />
+                  <p className="text-slate-600 text-xs leading-relaxed italic bg-slate-50/80 p-3 rounded-xl border border-slate-200/80 pl-6">
+                    "{item.testimonial}"
+                  </p>
                 </div>
 
               </div>
             </div>
-
-            {/* Right Side: Details & Testimonial Text */}
-            <div className="lg:col-span-5 space-y-6 text-left">
-              
-              <div>
-                <div className="inline-block px-3.5 py-1 rounded-full bg-blue-100 border border-blue-200 text-blue-900 text-xs font-bold mb-3">
-                  {current.procedure}
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
-                  {current.patientName} <span className="text-sm font-normal text-slate-500">({current.age})</span>
-                </h3>
-              </div>
-
-              {/* Stats Highlights */}
-              <div className="grid grid-cols-2 gap-3">
-                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                  <span className="text-xs text-slate-500 block font-medium">Eliminação de Peso</span>
-                  <span className="text-2xl font-extrabold font-heading text-blue-700">{current.weightLoss}</span>
-                </div>
-                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                  <span className="text-xs text-slate-500 block font-medium">Tempo de Evolução</span>
-                  <span className="text-2xl font-extrabold font-heading text-slate-900">{current.timeframe}</span>
-                </div>
-              </div>
-
-              {/* Health Gains Pill */}
-              <div className="p-4 rounded-2xl bg-blue-50 border border-blue-200 space-y-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-blue-800 block">
-                  Ganho Metabólico de Saúde
-                </span>
-                <p className="text-sm font-semibold text-slate-800">
-                  {current.healthGains}
-                </p>
-              </div>
-
-              {/* Patient Quote */}
-              <p className="text-slate-700 text-sm leading-relaxed italic bg-slate-50 p-4 rounded-xl border border-slate-200">
-                "{current.testimonial}"
-              </p>
-
-              {/* Tab Selector Controls */}
-              <div className="pt-2 flex items-center justify-between">
-                <span className="text-xs text-slate-500 font-medium">
-                  Caso {activeTab + 1} de {transformations.length}
-                </span>
-
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => setActiveTab((prev) => (prev === 0 ? transformations.length - 1 : prev - 1))}
-                    className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 transition-colors"
-                    aria-label="Anterior"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                  </button>
-
-                  <button
-                    onClick={() => setActiveTab((prev) => (prev === transformations.length - 1 ? 0 : prev + 1))}
-                    className="p-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/30 transition-colors"
-                    aria-label="Próximo"
-                  >
-                    <ChevronRight className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
+          ))}
         </div>
 
       </div>
     </section>
   );
 }
+

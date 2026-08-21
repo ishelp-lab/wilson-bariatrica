@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Award, Calendar, Calculator, CheckCircle2, Star, ArrowRight, Shield, TrendingUp } from 'lucide-react';
+import { ShieldCheck, Award, Calendar, Calculator, CheckCircle2, Star, ArrowRight, Shield } from 'lucide-react';
 import BrandLogo from './BrandLogo';
 
 export default function Hero() {
@@ -71,26 +71,15 @@ export default function Hero() {
           {/* Left Text Content */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            {/* Tagline / Subtitle */}
-            <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-sky-400">
-              <TrendingUp className="w-4 h-4 text-blue-400" />
-              <span>Tratamento Metabólico Avançado</span>
-            </div>
-
             {/* Main Headline (Inspired directly by Instagram Posts 3, 4 & 5) */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-heading leading-[1.08] tracking-tight">
               EMAGRECER <span className="underline decoration-blue-500 decoration-4 underline-offset-8">NÃO É</span> <span className="text-gradient-cyan">SÓ PERDER PESO.</span>
             </h1>
 
-            {/* Headline Subtext Box (Instagram Style Glass Box) */}
-            <div className="p-4 sm:p-5 rounded-2xl glass-panel-navy border border-blue-800/40 text-slate-200 text-base sm:text-lg leading-relaxed space-y-2">
-              <p className="font-semibold text-white">
-                O principal objetivo é proporcionar mais saúde, autonomia e qualidade de vida.
-              </p>
-              <p className="text-sm text-slate-300">
-                Cirurgia Bariátrica por videolaparoscopia com o <strong className="text-sky-300">Dr. Wilson Paulo dos Santos</strong>. Controle definitivo do peso e remissão de doenças crônicas.
-              </p>
-            </div>
+            {/* Fluid Subtext under Headline */}
+            <p className="text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed font-normal">
+              O objetivo principal da Cirurgia Bariátrica é proporcionar <strong className="text-white font-semibold">mais saúde, autonomia e qualidade de vida</strong>. Procedimentos modernos por videolaparoscopia com o <strong className="text-sky-300 font-semibold">Dr. Wilson Paulo dos Santos</strong>.
+            </p>
 
             {/* CTA Buttons (Instagram Action Pill Style) */}
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -153,11 +142,11 @@ export default function Hero() {
               <div className="absolute -inset-3 bg-gradient-to-tr from-blue-600/40 via-sky-500/20 to-indigo-600/40 rounded-3xl opacity-60 blur-xl animate-pulse-slow pointer-events-none" />
 
               {/* Main Image Container */}
-              <div className="relative rounded-3xl overflow-hidden glass-panel-navy border border-blue-700/60 shadow-2xl bg-gradient-to-b from-[#081836] to-[#040c18]">
+              <div className="relative rounded-3xl overflow-hidden glass-panel-navy border border-blue-700/60 shadow-2xl bg-gradient-to-b from-[#081836] to-[#040c18] aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] max-h-[520px]">
                 <img
-                  src="/assets/dr-wilson-hero.png"
+                  src="/assets/dr-wilson-real.jpg"
                   alt="Dr. Wilson Paulo dos Santos - Cirurgião Bariátrico e Metabólico"
-                  className="w-full h-auto object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-[center_35%] transform hover:scale-105 transition-transform duration-700"
                 />
                 
                 {/* Gradient Overlay */}

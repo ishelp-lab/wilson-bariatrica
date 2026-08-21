@@ -61,11 +61,11 @@ export default function AboutDoctor() {
               {/* Outer Glow */}
               <div className="absolute -inset-2 bg-gradient-to-tr from-blue-400 to-indigo-500 rounded-3xl opacity-20 blur-xl pointer-events-none" />
 
-              <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-2xl aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] max-h-[480px]">
                 <img
-                  src="/assets/dr-wilson-about.png"
-                  alt="Dr. Wilson Paulo dos Santos em atendimento cirúrgico"
-                  className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                  src="/assets/dr-wilson-real.jpg"
+                  alt="Dr. Wilson Paulo dos Santos"
+                  className="w-full h-full object-cover object-[center_35%] transform hover:scale-105 transition-transform duration-700"
                 />
                 
                 <div className="p-6 bg-slate-900 border-t border-slate-800">
