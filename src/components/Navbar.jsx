@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, Menu, X, ChevronRight } from 'lucide-react';
 import BrandLogo from './BrandLogo';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,7 +64,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white font-semibold text-sm shadow-lg shadow-blue-600/30 hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-0.5 border border-blue-400/30"
             >
-              <Calendar className="w-4 h-4 text-sky-200" />
+              <WhatsAppIcon className="w-4 h-4 text-emerald-400" />
               <span>AGENDAR AVALIAÇÃO</span>
             </a>
           </div>
@@ -108,7 +109,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold text-base shadow-xl shadow-blue-600/30"
               >
-                <Calendar className="w-5 h-5" />
+                <WhatsAppIcon className="w-5 h-5 text-emerald-400" />
                 <span>Agendar Consulta no WhatsApp</span>
               </a>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, CheckCircle, Clock, ShieldCheck, MessageCircle } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function ProcedureModal({ procedure, onClose }) {
   if (!procedure) return null;
@@ -66,7 +67,7 @@ export default function ProcedureModal({ procedure, onClose }) {
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white font-bold text-sm shadow-xl shadow-blue-600/30 border border-blue-400/30"
           >
-            <MessageCircle className="w-4 h-4 text-sky-200" />
+            <WhatsAppIcon className="w-4 h-4 text-emerald-400" />
             <span>Tirar Dúvidas no WhatsApp</span>
           </a>
         </div>

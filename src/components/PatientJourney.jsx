@@ -1,5 +1,6 @@
 import React from 'react';
 import { CalendarCheck, FileCheck, Stethoscope, HeartPulse, ArrowRight, CheckCircle2, ShieldCheck } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function PatientJourney() {
   const steps = [
@@ -167,6 +168,7 @@ export default function PatientJourney() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4.5 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white font-bold text-base shadow-xl shadow-blue-600/30 hover:-translate-y-0.5 transition-all border border-blue-400/30"
             >
+              <WhatsAppIcon className="w-5 h-5 text-emerald-400" />
               <span>Iniciar Atendimento no WhatsApp</span>
               <ArrowRight className="w-5 h-5 text-sky-200" />
             </a>

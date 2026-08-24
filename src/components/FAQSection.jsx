@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { HelpCircle, ChevronDown, MessageCircle } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -99,7 +100,7 @@ export default function FAQSection() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs transition-colors shrink-0 shadow-md shadow-emerald-500/20"
           >
-            <MessageCircle className="w-4 h-4" />
+            <WhatsAppIcon className="w-4 h-4 text-white" />
             <span>Falar com Atendimento</span>
           </a>
         </div>

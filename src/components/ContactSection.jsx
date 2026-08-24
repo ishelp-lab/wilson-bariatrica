@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Clock, Calendar, MessageCircle, Send, CheckCircle2 } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -67,8 +68,8 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-blue-600/20 border border-blue-400/40 flex items-center justify-center text-sky-300 shrink-0">
-                    <Phone className="w-6 h-6" />
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-600/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 shrink-0">
+                    <WhatsAppIcon className="w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="text-white font-bold text-sm">Central de WhatsApp</h4>
@@ -99,9 +100,9 @@ export default function ContactSection() {
                 href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Wilson."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-2xl bg-white text-blue-800 hover:bg-sky-50 flex items-center justify-center shadow-md shrink-0 transition-transform hover:scale-105"
+                className="w-12 h-12 rounded-2xl bg-white text-emerald-600 hover:bg-emerald-50 flex items-center justify-center shadow-md shrink-0 transition-transform hover:scale-105"
               >
-                <MessageCircle className="w-6 h-6" />
+                <WhatsAppIcon className="w-6 h-6" />
               </a>
             </div>
 
@@ -210,7 +211,7 @@ export default function ContactSection() {
                     type="submit"
                     className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white font-bold text-sm shadow-xl shadow-blue-600/30 transition-all hover:-translate-y-0.5 border border-blue-400/30"
                   >
-                    <Send className="w-4 h-4 text-sky-200" />
+                    <WhatsAppIcon className="w-4 h-4 text-emerald-400" />
                     <span>Enviar Agendamento via WhatsApp</span>
                   </button>
                 </form>

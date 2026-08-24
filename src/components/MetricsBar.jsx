@@ -5,7 +5,7 @@ export default function MetricsBar() {
   const metrics = [
     {
       icon: Activity,
-      value: '+3.500',
+      value: '+15.000',
       label: 'Cirurgias Realizadas',
       sublabel: 'Videolaparoscopia avançada 3D',
     },
@@ -32,7 +32,7 @@ export default function MetricsBar() {
   return (
     <section className="py-10 relative z-20 bg-[#040c18] border-b border-blue-950/80 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {metrics.map((metric, idx) => {
             const Icon = metric.icon;
