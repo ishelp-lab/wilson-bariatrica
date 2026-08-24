@@ -11,7 +11,7 @@ export default function MetricsBar() {
     },
     {
       icon: Award,
-      value: '15+ Anos',
+      value: '30+ Anos',
       label: 'Experiência Médica',
       sublabel: 'Membro Titular SBCBM & IFSO',
     },
