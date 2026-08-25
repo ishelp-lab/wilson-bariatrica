@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from './components/Hero';
 import MetricsBar from './components/MetricsBar';
 import Testimonials from './components/Testimonials';
+import VideoTestimonials from './components/VideoTestimonials';
 import AboutDoctor from './components/AboutDoctor';
 import BMICalculator from './components/BMICalculator';
 import Procedures from './components/Procedures';
@@ -18,6 +19,7 @@ export default function App() {
         <Hero />
         <MetricsBar />
         <Testimonials />
+        <VideoTestimonials />
         <AboutDoctor />
         <BMICalculator />
         <Procedures />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Award, Calendar, Calculator, CheckCircle2, Star, ArrowRight, Shield } from 'lucide-react';
+import { ShieldCheck, Calculator, CheckCircle2, ArrowRight, Shield } from 'lucide-react';
 import BrandLogo from './BrandLogo';
 import WhatsAppIcon from './WhatsAppIcon';
 
@@ -9,11 +9,11 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative pt-8 pb-24 md:pt-12 md:pb-36 bg-[#040c18] overflow-hidden border-b border-blue-950/80">
 
-      {/* Radial Blue Glows (Instagram Accent Lighting) */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/c2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/15 rounded-full blur-[160px] pointer-events-none" />
+      {/* Radial Blue Glows */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/15 rounded-full blur-[160px] pointer-events-none" />
       <div className="absolute top-1/3 right-5 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-[140px] pointer-events-none" />
 
-      {/* Background Ascending Arrow Vector (Inspired by Instagram Image 3) */}
+      {/* Background Ascending Arrow Vector */}
       <div className="absolute inset-0 pointer-events-none opacity-20 flex items-center justify-center">
         <svg className="w-full h-full text-blue-500/30" viewBox="0 0 1000 600" fill="none">
           <path
@@ -43,17 +43,6 @@ export default function Hero() {
           <BrandLogo variant="white" className="scale-125 sm:scale-135 md:scale-150 origin-center sm:origin-left py-2 sm:py-0" />
 
           <div className="flex items-center gap-4">
-            {/* Rating / Trust pill */}
-            <div className="hidden md:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/80 border border-amber-500/30 text-xs text-slate-200">
-              <div className="flex text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
-                ))}
-              </div>
-              <span className="font-bold text-amber-300">4.9/5</span>
-              <span className="text-slate-400">| +500 avaliações</span>
-            </div>
-
             <a
               href={whatsappUrl}
               target="_blank"
@@ -72,7 +61,7 @@ export default function Hero() {
           {/* Left Text Content */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
 
-            {/* Main Headline (Inspired directly by Instagram Posts 3, 4 & 5) */}
+            {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-heading leading-[1.08] tracking-tight">
               EMAGRECER <span className="underline decoration-blue-500 decoration-2 sm:decoration-4 underline-offset-2 sm:underline-offset-8">NÃO É</span> <span className="text-gradient-cyan">SÓ PERDER PESO.</span>
             </h1>
@@ -82,7 +71,7 @@ export default function Hero() {
               O objetivo principal da Cirurgia Bariátrica é proporcionar <strong className="text-white font-semibold">mais saúde, autonomia e qualidade de vida</strong>. Procedimentos modernos por videolaparoscopia com o <strong className="text-sky-300 font-semibold">Dr. Wilson Paulo dos Santos</strong>.
             </p>
 
-            {/* CTA Buttons (Instagram Action Pill Style) */}
+            {/* CTA Buttons */}
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <a
                 href={whatsappUrl}
@@ -123,10 +112,10 @@ export default function Hero() {
             {/* Medical Credentials Bar */}
             <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3">
               <span className="px-3 py-1.5 rounded-lg bg-blue-950/90 border border-blue-800/60 text-xs font-semibold text-slate-200">
-                CRM-SP 145.890
+                CRM-PR 14.204
               </span>
               <span className="px-3 py-1.5 rounded-lg bg-blue-950/90 border border-blue-800/60 text-xs font-semibold text-slate-200">
-                RQE 78.432
+                RQE 12317 / RQE 12005
               </span>
               <span className="px-3 py-1.5 rounded-lg bg-blue-900/40 border border-blue-500/40 text-xs font-semibold text-sky-300">
                 Titular SBCBM & IFSO
@@ -173,17 +162,6 @@ export default function Hero() {
                 <div>
                   <div className="text-xl font-bold font-heading text-white">+15.000</div>
                   <div className="text-xs text-slate-300 font-medium">Cirurgias Realizadas</div>
-                </div>
-              </div>
-
-              {/* Floating Metric Badge 2 (Bottom Left) */}
-              <div className="absolute -bottom-6 -left-4 sm:-left-6 glass-panel-navy rounded-2xl p-4 shadow-2xl border border-amber-500/40 flex items-center gap-3.5 animate-float-delayed hidden sm:flex">
-                <div className="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
-                  <Star className="w-6 h-6 fill-amber-400" />
-                </div>
-                <div>
-                  <div className="text-xl font-bold font-heading text-amber-400">99,4%</div>
-                  <div className="text-xs text-slate-300 font-medium">Satisfação dos Pacientes</div>
                 </div>
               </div>
 

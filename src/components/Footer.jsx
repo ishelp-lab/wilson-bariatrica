@@ -25,8 +25,8 @@ export default function Footer() {
             </p>
 
             <div className="flex flex-wrap items-center gap-3 text-xs text-slate-200 pt-1">
-              <span className="px-3 py-1.5 rounded-lg bg-blue-950 border border-blue-800 font-semibold">CRM-SP 145.890</span>
-              <span className="px-3 py-1.5 rounded-lg bg-blue-950 border border-blue-800 font-semibold">RQE 78.432</span>
+              <span className="px-3 py-1.5 rounded-lg bg-blue-950 border border-blue-800 font-semibold">CRM-PR 14.204</span>
+              <span className="px-3 py-1.5 rounded-lg bg-blue-950 border border-blue-800 font-semibold">RQE 12317 / RQE 12005</span>
               <span className="px-3 py-1.5 rounded-lg bg-blue-900/40 border border-blue-500/40 font-semibold text-sky-300">Membro Titular SBCBM & IFSO</span>
             </div>
           </div>

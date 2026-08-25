@@ -13,7 +13,7 @@ export default function AboutDoctor() {
     },
     {
       title: 'Registro RQE Ativo',
-      desc: 'Qualificação de Especialista Cirúrgico (RQE 78.432 / CRM-SP 145.890)',
+      desc: 'Cirurgião Geral (RQE 12317 / RQE 12005 / CRM-PR 14.204)',
     },
     {
       title: 'Videolaparoscopia 3D Avançada',
@@ -30,7 +30,7 @@ export default function AboutDoctor() {
       {/* Watermark Text */}
       <div className="absolute top-10 right-0 pointer-events-none opacity-5 overflow-hidden">
         <span className="text-[16vw] font-black uppercase text-blue-900 tracking-widest font-heading">
-          MEDICINA
+          BARIÁTRICA
         </span>
       </div>
 
@@ -86,7 +86,7 @@ export default function AboutDoctor() {
                 <Shield className="w-8 h-8 text-blue-600" />
                 <div>
                   <p className="text-xs text-slate-500 font-medium">Registro Profissional</p>
-                  <p className="text-sm font-bold text-slate-900">CRM-SP 145.890 / RQE 78.432</p>
+                  <p className="text-sm font-bold text-slate-900">CRM-PR 14.204 / RQE 12317</p>
                 </div>
               </div>
 
