@@ -9,7 +9,7 @@ export default function PatientJourney() {
       icon: CalendarCheck,
       title: 'Consulta Inicial & Diagnóstico',
       tag: 'Acolhimento Humanizado',
-      desc: 'Atendimento presencial em São Paulo ou via Telemedicina para todo o Brasil. Avaliação minuciosa do seu histórico de saúde, hábitos e objetivos.',
+      desc: 'Atendimento presencial em Curitiba ou via Telemedicina para todo o Brasil. Avaliação minuciosa do seu histórico de saúde, hábitos e objetivos.',
       image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800',
       badgeText: 'Presencial ou Online',
       keyPoint: 'Escuta atenta e plano personalizado',
@@ -29,10 +29,10 @@ export default function PatientJourney() {
       icon: Stethoscope,
       title: 'Cirurgia Minimamente Invasiva',
       tag: 'Videolaparoscopia 3D',
-      desc: 'Procedimento cirúrgico preciso em hospital de referência em São Paulo. Furos milimétricos com alta hospitalar em 24h a 48h pelo Protocolo ERAS.',
+      desc: 'Procedimento cirúrgico preciso em hospital de referência em Curitiba. Furos milimétricos com alta hospitalar em 24h a 48h pelo Protocolo ERAS.',
       image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800',
       badgeText: 'Alta em 24h a 48h',
-      keyPoint: 'Hospitais de Excelência em SP',
+      keyPoint: 'Hospitais de Excelência em Curitiba',
     },
     {
       num: '04',
@@ -163,7 +163,7 @@ export default function PatientJourney() {
 
           <div className="pt-2">
             <a
-              href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20dar%20o%20primeiro%20passo%20e%20agendar%20uma%20consulta%20com%20o%20Dr.%20Wilson."
+              href="https://wa.me/5541995245847?text=Ol%C3%A1%2C%20quero%20dar%20o%20primeiro%20passo%20e%20agendar%20uma%20consulta%20com%20o%20Dr.%20Wilson."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4.5 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white font-bold text-base shadow-xl shadow-blue-600/30 hover:-translate-y-0.5 transition-all border border-blue-400/30"

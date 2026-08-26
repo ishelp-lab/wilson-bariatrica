@@ -2,7 +2,7 @@ import React from 'react';
 import WhatsAppIcon from './WhatsAppIcon';
 
 export default function FloatingWhatsApp() {
-  const whatsappUrl = "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Wilson.";
+  const whatsappUrl = "https://wa.me/5541995245847?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Wilson.";
 
   return (
     <>

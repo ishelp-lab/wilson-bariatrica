@@ -5,7 +5,7 @@ import WhatsAppIcon from './WhatsAppIcon';
 export default function ProcedureModal({ procedure, onClose }) {
   if (!procedure) return null;
 
-  const whatsappLink = `https://wa.me/5511999999999?text=Ol%C3%A1%20Dr.%20Wilson!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20procedimento:%20${encodeURIComponent(procedure.title)}`;
+  const whatsappLink = `https://wa.me/5541995245847?text=Ol%C3%A1%20Dr.%20Wilson!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20procedimento:%20${encodeURIComponent(procedure.title)}`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#030914]/85 backdrop-blur-md animate-in fade-in duration-200">

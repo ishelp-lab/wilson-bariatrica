@@ -23,7 +23,7 @@ export default function Differentials() {
     },
     {
       icon: Hospital,
-      title: 'Hospitais de Excelência em São Paulo',
+      title: 'Hospitais de Excelência em Curitiba',
       desc: 'Cirurgias realizadas exclusivamente em centros hospitalares de ponta com acreditação internacional e leitos de UTI de alta tecnologia.',
       tag: 'Segurança Máxima',
     },

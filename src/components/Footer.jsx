@@ -21,12 +21,20 @@ export default function Footer() {
             </a>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl">
-              Dr. Wilson Paulo dos Santos — Especialista em Cirurgia Bariátrica, Metabólica e Videolaparoscópica de Alta Precisão. Atendimento presencial em São Paulo e Telemedicina para todo o Brasil.
+              Dr. Wilson Paulo dos Santos — Especialista em Cirurgia Bariátrica, Metabólica e Videolaparoscópica de Alta Precisão. Atendimento presencial em Curitiba (Av. Paraná, 202 - Cabral) e Telemedicina para todo o Brasil.
             </p>
 
             <div className="flex flex-wrap items-center gap-3 text-xs text-slate-200 pt-1">
               <span className="px-3 py-1.5 rounded-lg bg-blue-950 border border-blue-800 font-semibold">CRM-PR 14.204</span>
               <span className="px-3 py-1.5 rounded-lg bg-blue-950 border border-blue-800 font-semibold">RQE 12317 / RQE 12005</span>
+              <a
+                href="https://www.instagram.com/dr.wilsonpaulodossantos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1.5 rounded-lg bg-pink-950/60 border border-pink-700/50 font-semibold text-pink-300 hover:text-pink-200 transition-colors inline-flex items-center gap-1.5"
+              >
+                <span>@dr.wilsonpaulodossantos</span>
+              </a>
               <span className="px-3 py-1.5 rounded-lg bg-blue-900/40 border border-blue-500/40 font-semibold text-sky-300">Membro Titular SBCBM & IFSO</span>
             </div>
           </div>

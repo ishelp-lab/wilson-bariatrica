@@ -18,7 +18,7 @@ export default function ContactSection() {
     setSubmitted(true);
     
     const text = `Ol%C3%A1%20Dr.%20Wilson!%20Meu%20nome%20%C3%A9%20${encodeURIComponent(formData.name)}.%20Gostaria%20de%20agendar%20uma%20consulta.%20Interesse:%20${encodeURIComponent(formData.procedure)}.%20Telefone:%20${encodeURIComponent(formData.phone)}.%20Mensagem:%20${encodeURIComponent(formData.message)}`;
-    window.open(`https://wa.me/5511999999999?text=${text}`, '_blank');
+    window.open(`https://wa.me/5541995245847?text=${text}`, '_blank');
   };
 
   return (
@@ -41,7 +41,7 @@ export default function ContactSection() {
           </h2>
 
           <p className="text-slate-300 text-base sm:text-lg">
-            Atendimento presencial em São Paulo e consultas por Telemedicina para pacientes de todo o Brasil.
+            Atendimento presencial em Curitiba e consultas por Telemedicina para pacientes de todo o Brasil.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-white font-bold text-sm">Consultório Presencial</h4>
-                    <p className="text-xs text-slate-300 mt-0.5">Av. Paulista, 1000 - Bela Vista, São Paulo - SP</p>
+                    <p className="text-xs text-slate-300 mt-0.5">Av. Paraná, 202 - Cabral, Curitiba, PR, 80035-130</p>
                     <p className="text-xs text-sky-300 mt-1 font-semibold">Estacionamento e acesso PCD no local</p>
                   </div>
                 </div>
@@ -73,8 +73,27 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-white font-bold text-sm">Central de WhatsApp</h4>
-                    <p className="text-xs text-slate-300 mt-0.5">+55 (11) 99999-9999</p>
+                    <p className="text-xs text-slate-300 mt-0.5">(41) 99524-5847</p>
                     <p className="text-xs text-slate-400">Atendimento humanizado com a secretária</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-pink-600/20 border border-pink-400/40 flex items-center justify-center text-pink-400 shrink-0">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-sm">Instagram Oficial</h4>
+                    <a
+                      href="https://www.instagram.com/dr.wilsonpaulodossantos"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-sky-300 hover:underline mt-0.5 block font-medium"
+                    >
+                      @dr.wilsonpaulodossantos
+                    </a>
                   </div>
                 </div>
 
@@ -97,7 +116,7 @@ export default function ContactSection() {
                 <p className="text-xs text-sky-200 mt-0.5">Atendimento rápido em tempo real.</p>
               </div>
               <a
-                href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Wilson."
+                href="https://wa.me/5541995245847?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Wilson."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-2xl bg-white text-emerald-600 hover:bg-emerald-50 flex items-center justify-center shadow-md shrink-0 transition-transform hover:scale-105"
@@ -157,7 +176,7 @@ export default function ContactSection() {
                         id="phoneInputNavy"
                         type="tel"
                         required
-                        placeholder="(11) 99999-9999"
+                        placeholder="(41) 99524-5847"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-[#051124] border border-blue-800 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500 transition-colors shadow-inner"

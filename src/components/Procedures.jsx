@@ -102,61 +102,69 @@ export default function Procedures() {
   return (
     <section id="procedimentos" className="py-24 relative overflow-hidden bg-[#040c18] border-b border-blue-950/80">
       
+      {/* Background Soft Glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-blue-600/10 rounded-full blur-[160px] pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Centered Header */}
+        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel-navy border-blue-500/40 text-sky-300 text-xs font-extrabold uppercase tracking-wider shadow-lg">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-sky-300 text-xs font-bold uppercase tracking-wider shadow-sm">
             <Stethoscope className="w-4 h-4 text-sky-400" />
             <span>Especialidades Cirúrgicas</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-heading">
             Procedimentos de <span className="text-gradient-cyan">Alta Precisão</span>
           </h2>
 
-          <p className="text-slate-300 text-base sm:text-lg">
-            Técnicas cirúrgicas modernas por videolaparoscopia projetadas para segurança máxima, cicatrizes imperceptíveis e rápida recuperação hospitalar.
+          <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            Técnicas cirúrgicas modernas por videolaparoscopia projetadas para segurança máxima, recuperação confortável e resultados duradouros.
           </p>
         </div>
 
-        {/* Procedures Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Procedures Soft Light Blue Cards Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {procedures.map((proc) => {
             const Icon = proc.icon;
             return (
               <div
                 key={proc.id}
-                className="p-8 rounded-3xl bg-[#081c3c] border border-blue-800/60 flex flex-col justify-between group glass-card-hover"
+                className="p-7 sm:p-8 rounded-3xl bg-[#eaf3fc] border border-sky-100 shadow-xl hover:shadow-2xl hover:border-sky-300 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
               >
+                {/* Top Subtle Color Accent Bar */}
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-600 opacity-90 group-hover:opacity-100 transition-opacity" />
+
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-400/40 flex items-center justify-center text-sky-300 group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="w-7 h-7" />
+                    {/* Larger & Prominent Icon Container */}
+                    <div className="w-16 h-16 rounded-2xl bg-white border border-blue-200/80 flex items-center justify-center text-blue-700 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm">
+                      <Icon className="w-8 h-8 stroke-[2]" />
                     </div>
-                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-950 text-sky-300 border border-blue-700/60">
+
+                    <span className="px-3.5 py-1.5 rounded-full text-xs font-bold bg-blue-100/80 text-blue-800 border border-blue-200/90">
                       {proc.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold font-heading text-white mb-2 group-hover:text-sky-300 transition-colors">
+                  <h3 className="text-xl font-extrabold text-slate-900 mb-1.5 font-heading group-hover:text-blue-700 transition-colors leading-snug">
                     {proc.title}
                   </h3>
 
-                  <p className="text-xs font-semibold text-sky-400 mb-4">{proc.subtitle}</p>
+                  <p className="text-xs font-semibold text-blue-600 mb-4">{proc.subtitle}</p>
                   
-                  <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                  <p className="text-sm text-slate-700 leading-relaxed mb-6">
                     {proc.summary}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-blue-900/60">
+                <div className="pt-4 border-t border-blue-200/60">
                   <button
                     onClick={() => setSelectedProcedure(proc)}
-                    className="w-full inline-flex items-center justify-between px-4 py-3 rounded-xl bg-blue-950/80 hover:bg-blue-600 text-slate-200 hover:text-white text-xs font-bold transition-all border border-blue-800 hover:border-blue-400/50"
+                    className="w-full inline-flex items-center justify-between px-5 py-3 rounded-2xl bg-blue-900 hover:bg-blue-700 text-white text-xs font-bold transition-all shadow-md group/btn"
                   >
-                    <span>Ver Detalhes do Procedimento</span>
-                    <ArrowRight className="w-4 h-4 text-sky-300 group-hover:translate-x-1 transition-transform" />
+                    <span>Ver detalhes do procedimento</span>
+                    <ArrowRight className="w-4 h-4 text-sky-300 group-hover/btn:text-white group-hover/btn:translate-x-1 transition-all" />
                   </button>
                 </div>
               </div>
@@ -176,3 +184,4 @@ export default function Procedures() {
     </section>
   );
 }
+

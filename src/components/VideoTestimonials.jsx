@@ -3,7 +3,7 @@ import { Video, Play, MessageSquareQuote, CheckCircle2 } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
 export default function VideoTestimonials() {
-  const whatsappUrl = "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20cirurgia%20bari%C3%A1trica%20com%20o%20Dr.%20Wilson%20Paulo%20dos%20Santos.";
+  const whatsappUrl = "https://wa.me/5541995245847?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20cirurgia%20bari%C3%A1trica%20com%20o%20Dr.%20Wilson%20Paulo%20dos%20Santos.";
 
   // Lista de depoimentos em vídeo preparada para você inserir seus links de vídeo futuramente.
   // Pode usar URLs diretas do YouTube/Vimeo (com embed), reels ou arquivos de vídeo local/MP4.

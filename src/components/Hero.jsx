@@ -4,7 +4,7 @@ import BrandLogo from './BrandLogo';
 import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Hero() {
-  const whatsappUrl = "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20cirurgia%20bari%C3%A1trica%20com%20o%20Dr.%20Wilson%20Paulo%20dos%20Santos.";
+  const whatsappUrl = "https://wa.me/5541995245847?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20cirurgia%20bari%C3%A1trica%20com%20o%20Dr.%20Wilson%20Paulo%20dos%20Santos.";
 
   return (
     <section id="inicio" className="relative pt-8 pb-24 md:pt-12 md:pb-36 bg-[#040c18] overflow-hidden border-b border-blue-950/80">

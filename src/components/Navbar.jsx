@@ -28,7 +28,7 @@ export default function Navbar() {
     { name: 'CONTATO', href: '#contato' },
   ];
 
-  const whatsappLink = "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Wilson%20Paulo%20dos%20Santos.";
+  const whatsappLink = "https://wa.me/5541995245847?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Wilson%20Paulo%20dos%20Santos.";
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled

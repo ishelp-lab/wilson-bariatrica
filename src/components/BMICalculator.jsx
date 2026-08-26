@@ -90,7 +90,7 @@ export default function BMICalculator() {
 
   const getWhatsAppMessage = () => {
     const text = `Ol%C3%A1%20Dr.%20Wilson!%20Calculei%20meu%20IMC%20no%20seu%20site.%20Peso:%20${weight}kg,%20Altura:%20${height}cm.%20Resultado:%20IMC%20${bmi}%20(${encodeURIComponent(category.label)}).%20Gostaria%20de%20agendar%20uma%20consulta.`;
-    return `https://wa.me/5511999999999?text=${text}`;
+    return `https://wa.me/5541995245847?text=${text}`;
   };
 
   return (
