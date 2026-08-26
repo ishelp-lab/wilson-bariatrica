@@ -134,7 +134,7 @@ export default function Hero() {
               {/* Main Image Container */}
               <div className="relative rounded-3xl overflow-hidden glass-panel-navy border border-blue-700/60 shadow-2xl bg-gradient-to-b from-[#081836] to-[#040c18] aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] max-h-[520px]">
                 <img
-                  src="/assets/dr-wilson-real.jpg"
+                  src="/assets/dr-wilson-perfil.jpg"
                   alt="Dr. Wilson Paulo dos Santos - Cirurgião Bariátrico e Metabólico"
                   className="w-full h-full object-cover object-[center_35%] transform hover:scale-105 transition-transform duration-700"
                 />

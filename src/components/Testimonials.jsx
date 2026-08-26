@@ -1,114 +1,166 @@
-import React, { useState } from 'react';
-import { Sparkles, ShieldCheck } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Sparkles, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Testimonials() {
-  const [activeTab, setActiveTab] = useState('all');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(3.2);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   const transformations = [
     {
       id: 1,
-      patientName: 'Paula Ramos',
-      age: '34 anos',
-      category: 'bypass',
-      procedure: 'Bypass Gástrico',
-      weightLoss: '-46 kg',
-      timeframe: '12 meses',
-      antesImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800',
-      depoisImg: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800',
+      patientName: 'Paula',
+      antesImg: '/assets/transformacao-1-antes.jpg',
+      depoisImg: '/assets/transformacao-1-depois.jpg',
     },
     {
       id: 2,
-      patientName: 'Marcelo Oliveira',
-      age: '42 anos',
-      category: 'sleeve',
-      procedure: 'Sleeve Gástrico',
-      weightLoss: '-39 kg',
-      timeframe: '9 meses',
-      antesImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800',
-      depoisImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800',
+      patientName: 'Aline',
+      antesImg: '/assets/aline-antes.jpg',
+      depoisImg: '/assets/aline-depois.jpg',
     },
     {
       id: 3,
-      patientName: 'Camila Santos',
-      age: '38 anos',
-      category: 'bypass',
-      procedure: 'Bypass Gástrico',
-      weightLoss: '-41 kg',
-      timeframe: '10 meses',
-      antesImg: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800',
-      depoisImg: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800',
+      patientName: 'Amanda',
+      antesImg: '/assets/amanda-antes.jpg',
+      depoisImg: '/assets/amanda-depois.jpg',
     },
     {
       id: 4,
-      patientName: 'Rodrigo Mendonça',
-      age: '45 anos',
-      category: 'sleeve',
-      procedure: 'Sleeve Gástrico',
-      weightLoss: '-52 kg',
-      timeframe: '14 meses',
-      antesImg: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800',
-      depoisImg: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800',
+      patientName: 'Cris',
+      antesImg: '/assets/cris-antes.jpg',
+      depoisImg: '/assets/cris-depois.jpg',
     },
     {
       id: 5,
-      patientName: 'Juliana Ferreira',
-      age: '31 anos',
-      category: 'bypass',
-      procedure: 'Bypass Gástrico',
-      weightLoss: '-37 kg',
-      timeframe: '8 meses',
-      antesImg: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=800',
-      depoisImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800',
+      patientName: 'Dione',
+      antesImg: '/assets/dione-antes.jpg',
+      depoisImg: '/assets/dione-depois.jpg',
     },
     {
       id: 6,
-      patientName: 'Eduardo Costa',
-      age: '39 anos',
-      category: 'sleeve',
-      procedure: 'Sleeve Gástrico',
-      weightLoss: '-48 kg',
-      timeframe: '11 meses',
-      antesImg: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&q=80&w=800',
-      depoisImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800',
+      patientName: 'Fernanda',
+      antesImg: '/assets/fernanda-antes.jpg',
+      depoisImg: '/assets/fernanda-depois.jpg',
     },
     {
       id: 7,
-      patientName: 'Mariana Lima',
-      age: '36 anos',
-      category: 'bypass',
-      procedure: 'Bypass Gástrico',
-      weightLoss: '-44 kg',
-      timeframe: '13 meses',
-      antesImg: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800',
-      depoisImg: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800',
+      patientName: 'Gizely',
+      antesImg: '/assets/gizely-antes.jpg',
+      depoisImg: '/assets/gizely-depois.jpg',
     },
     {
       id: 8,
-      patientName: 'Lucas Rocha',
-      age: '41 anos',
-      category: 'sleeve',
-      procedure: 'Sleeve Gástrico',
-      weightLoss: '-40 kg',
-      timeframe: '9 meses',
-      antesImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800',
-      depoisImg: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800',
+      patientName: 'Guilcelia',
+      antesImg: '/assets/guilcelia-antes.jpg',
+      depoisImg: '/assets/guilcelia-depois.jpg',
     },
     {
       id: 9,
-      patientName: 'Fernanda Alves',
-      age: '33 anos',
-      category: 'bypass',
-      procedure: 'Bypass Gástrico',
-      weightLoss: '-45 kg',
-      timeframe: '12 meses',
-      antesImg: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800',
-      depoisImg: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=800',
+      patientName: 'Guilherme',
+      antesImg: '/assets/guilherme-antes.jpg',
+      depoisImg: '/assets/guilherme-depois.jpg',
+    },
+    {
+      id: 10,
+      patientName: 'Karoliny',
+      antesImg: '/assets/karoliny-antes.jpg',
+      depoisImg: '/assets/karoliny-depois.jpg',
+    },
+    {
+      id: 11,
+      patientName: 'Ketelyn',
+      antesImg: '/assets/ketelyn-antes.jpg',
+      depoisImg: '/assets/ketelyn-depois.jpg',
+    },
+    {
+      id: 12,
+      patientName: 'Maria',
+      antesImg: '/assets/maria-antes.jpg',
+      depoisImg: '/assets/maria-depois.jpg',
+    },
+    {
+      id: 13,
+      patientName: 'Naiara',
+      antesImg: '/assets/naiara-antes.jpg',
+      depoisImg: '/assets/naiara-depois.jpg',
+    },
+    {
+      id: 14,
+      patientName: 'Naldo',
+      antesImg: '/assets/naldo-antes.jpg',
+      depoisImg: '/assets/naldo-depois.jpg',
+    },
+    {
+      id: 15,
+      patientName: 'Rafaelli',
+      antesImg: '/assets/rafaelli-antes.jpg',
+      depoisImg: '/assets/rafaelli-depois.jpg',
+    },
+    {
+      id: 16,
+      patientName: 'Sharon',
+      antesImg: '/assets/sharon-antes.jpg',
+      depoisImg: '/assets/sharon-depois.jpg',
+    },
+    {
+      id: 17,
+      patientName: 'Sheila',
+      antesImg: '/assets/sheila-antes.jpg',
+      depoisImg: '/assets/sheila-depois.jpg',
     },
   ];
 
-  const filteredTransformations = activeTab === 'all'
-    ? transformations
-    : transformations.filter(item => item.category === activeTab);
+  // Responsiveness: 1.25 em telas muito pequenas, 1.45 no mobile, 2.3 em tablets e 3.25 em desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 480) {
+        setCardsToShow(1.2);
+      } else if (window.innerWidth < 640) {
+        setCardsToShow(1.45);
+      } else if (window.innerWidth < 1024) {
+        setCardsToShow(2.3);
+      } else {
+        setCardsToShow(3.25);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const maxIndex = Math.max(0, transformations.length - Math.floor(cardsToShow));
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  };
+
+  // Touch Swipe handlers for mobile
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const diff = touchStartX.current - touchEndX.current;
+    if (diff > 50) {
+      nextSlide();
+    } else if (diff < -50) {
+      prevSlide();
+    }
+    touchStartX.current = 0;
+    touchEndX.current = 0;
+  };
 
   return (
     <section id="transformacoes" className="py-24 relative overflow-hidden bg-slate-100 border-b border-slate-200">
@@ -139,129 +191,130 @@ export default function Testimonials() {
           <p className="text-slate-600 text-base sm:text-lg font-medium">
             Confira a evolução real de pacientes que transformaram sua saúde e qualidade de vida com o Dr. Wilson Paulo dos Santos.
           </p>
-
-          {/* Filter Pills */}
-          <div className="flex flex-wrap justify-center gap-2 pt-4">
-            <button
-              onClick={() => setActiveTab('all')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                activeTab === 'all'
-                  ? 'bg-blue-700 text-white shadow-md'
-                  : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
-              }`}
-            >
-              Todos os Casos (9)
-            </button>
-            <button
-              onClick={() => setActiveTab('bypass')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                activeTab === 'bypass'
-                  ? 'bg-blue-700 text-white shadow-md'
-                  : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
-              }`}
-            >
-              Bypass Gástrico
-            </button>
-            <button
-              onClick={() => setActiveTab('sleeve')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                activeTab === 'sleeve'
-                  ? 'bg-blue-700 text-white shadow-md'
-                  : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
-              }`}
-            >
-              Sleeve Gástrico
-            </button>
-          </div>
         </div>
 
-        {/* 9 Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {filteredTransformations.map((item) => (
+        {/* Carousel Container */}
+        <div className="relative px-2 sm:px-10">
+          
+          {/* Left Arrow Button */}
+          <button
+            onClick={prevSlide}
+            aria-label="Anterior"
+            className="absolute -left-2 sm:left-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-2xl bg-white/90 hover:bg-blue-700 text-slate-700 hover:text-white border border-slate-200 hover:border-blue-700 shadow-xl flex items-center justify-center transition-all duration-300 backdrop-blur-sm group"
+          >
+            <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
+          </button>
+
+          {/* Right Arrow Button */}
+          <button
+            onClick={nextSlide}
+            aria-label="Próximo"
+            className="absolute -right-2 sm:right-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-2xl bg-white/90 hover:bg-blue-700 text-slate-700 hover:text-white border border-slate-200 hover:border-blue-700 shadow-xl flex items-center justify-center transition-all duration-300 backdrop-blur-sm group"
+          >
+            <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
+          </button>
+
+          {/* Carousel Track Wrapper with Touch Gesture support */}
+          <div
+            className="overflow-hidden py-4 cursor-grab active:cursor-grabbing"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             <div
-              key={item.id}
-              className="bg-white rounded-3xl p-5 border border-slate-200 shadow-xl flex flex-col justify-between hover:shadow-2xl hover:border-blue-300 transition-all duration-300 group"
+              className="flex gap-4 sm:gap-6 transition-transform duration-500 ease-out"
+              style={{
+                transform: `translateX(calc(-${currentIndex} * (100% / ${cardsToShow})))`,
+              }}
             >
-              <div className="space-y-4">
-                
-                {/* Dark Frame Container for Before & After Images */}
-                <div className="bg-[#050f21] p-3 rounded-2xl border border-blue-900/80 shadow-lg">
-                  
-                  {/* Header Labels */}
-                  <div className="grid grid-cols-2 gap-2 mb-2">
-                    <div className="py-1 text-center bg-[#091b3b] rounded-lg border border-blue-800/60 text-white font-heading font-extrabold text-xs tracking-wide">
-                      Antes
-                    </div>
-                    <div className="py-1 text-center bg-blue-600 rounded-lg text-white font-heading font-extrabold text-xs tracking-wide">
-                      Depois
-                    </div>
-                  </div>
-
-                  {/* Split Photos */}
-                  <div className="grid grid-cols-2 gap-2 relative rounded-xl overflow-hidden">
+              {transformations.map((item) => (
+                <div
+                  key={item.id}
+                  className="shrink-0 bg-white rounded-3xl p-5 border border-slate-200 shadow-xl flex flex-col justify-between hover:shadow-2xl hover:border-blue-300 transition-all duration-300 group"
+                  style={{
+                    width: `calc((100% - ${(cardsToShow - 1) * 1.5}rem) / ${cardsToShow})`,
+                  }}
+                >
+                  <div className="space-y-4">
                     
-                    {/* Antes Photo Frame */}
-                    <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10">
-                      <img
-                        src={item.antesImg}
-                        alt={`Paciente ${item.patientName} Antes`}
-                        className="w-full h-full object-cover object-center filter contrast-[1.05]"
-                      />
-                      <span className="absolute bottom-2 left-2 text-[10px] font-bold text-amber-300 bg-black/70 px-1.5 py-0.5 rounded backdrop-blur-sm">
-                        Pré-Op
-                      </span>
+                    {/* Dark Frame Container for Before & After Images */}
+                    <div className="bg-[#050f21] p-3 rounded-2xl border border-blue-900/80 shadow-lg">
+                      
+                      {/* Header Labels */}
+                      <div className="grid grid-cols-2 gap-2 mb-2">
+                        <div className="py-1 text-center bg-[#091b3b] rounded-lg border border-blue-800/60 text-white font-heading font-extrabold text-xs tracking-wide">
+                          Antes
+                        </div>
+                        <div className="py-1 text-center bg-blue-600 rounded-lg text-white font-heading font-extrabold text-xs tracking-wide">
+                          Depois
+                        </div>
+                      </div>
+
+                      {/* Split Photos */}
+                      <div className="grid grid-cols-2 gap-2 relative rounded-xl overflow-hidden">
+                        
+                        {/* Antes Photo Frame */}
+                        <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10">
+                          <img
+                            src={item.antesImg}
+                            alt={`Paciente ${item.patientName} Antes`}
+                            className="w-full h-full object-cover object-center filter contrast-[1.05]"
+                          />
+                          <span className="absolute bottom-2 left-2 text-[10px] font-bold text-amber-300 bg-black/70 px-1.5 py-0.5 rounded backdrop-blur-sm">
+                            Pré-Op
+                          </span>
+                        </div>
+
+                        {/* Depois Photo Frame */}
+                        <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-blue-400/40">
+                          <img
+                            src={item.depoisImg}
+                            alt={`Paciente ${item.patientName} Depois`}
+                            className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+
+                      </div>
+
+                      {/* Doctor Seal Watermark */}
+                      <div className="mt-2.5 pt-2 border-t border-blue-900/60 flex items-center justify-center px-1">
+                        <div className="flex items-center gap-1.5">
+                          <ShieldCheck className="w-3.5 h-3.5 text-sky-400" />
+                          <span className="font-signature text-base text-white">Dr. Wilson Paulo</span>
+                        </div>
+                      </div>
+
                     </div>
 
-                    {/* Depois Photo Frame */}
-                    <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-blue-400/40">
-                      <img
-                        src={item.depoisImg}
-                        alt={`Paciente ${item.patientName} Depois`}
-                        className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <span className="absolute bottom-2 right-2 text-[10px] font-bold text-sky-100 bg-blue-600/90 px-1.5 py-0.5 rounded backdrop-blur-sm shadow-sm">
-                        {item.weightLoss}
-                      </span>
+                    {/* Patient Summary Header */}
+                    <div className="text-center pt-1">
+                      <h3 className="text-base font-extrabold text-slate-900 font-heading">
+                        {item.patientName}
+                      </h3>
                     </div>
 
                   </div>
-
-                  {/* Doctor Seal Watermark */}
-                  <div className="mt-2.5 pt-2 border-t border-blue-900/60 flex items-center justify-between px-1">
-                    <div className="flex items-center gap-1.5">
-                      <ShieldCheck className="w-3.5 h-3.5 text-sky-400" />
-                      <span className="font-signature text-base text-white">Dr. Wilson Paulo</span>
-                    </div>
-                    <span className="text-[10px] font-bold text-sky-300 uppercase tracking-wider">
-                      {item.timeframe}
-                    </span>
-                  </div>
-
                 </div>
-
-                {/* Patient Summary Header */}
-                <div className="flex items-center justify-between pt-1">
-                  <div>
-                    <h3 className="text-base font-extrabold text-slate-900 font-heading">
-                      {item.patientName} <span className="text-xs font-normal text-slate-500">({item.age})</span>
-                    </h3>
-                    <p className="text-xs font-semibold text-blue-700 mt-0.5">
-                      {item.procedure}
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <span className="text-lg font-black font-heading text-blue-700 block leading-none">
-                      {item.weightLoss}
-                    </span>
-                    <span className="text-[10px] font-medium text-slate-400 block mt-0.5">
-                      {item.timeframe}
-                    </span>
-                  </div>
-                </div>
-
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Dots Pagination */}
+          <div className="flex justify-center items-center gap-2 pt-6">
+            {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                aria-label={`Ir para a foto ${idx + 1}`}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  currentIndex === idx
+                    ? 'w-8 bg-blue-700'
+                    : 'w-2.5 bg-slate-300 hover:bg-slate-400'
+                }`}
+              />
+            ))}
+          </div>
+
         </div>
 
       </div>
