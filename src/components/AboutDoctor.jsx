@@ -28,8 +28,8 @@ export default function AboutDoctor() {
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Watermark Text */}
-      <div className="absolute top-10 right-0 pointer-events-none opacity-5 overflow-hidden">
-        <span className="text-[16vw] font-black uppercase text-blue-900 tracking-widest font-heading">
+      <div className="absolute top-2 sm:top-4 inset-x-0 flex justify-center items-center pointer-events-none opacity-5 overflow-hidden select-none">
+        <span className="text-[12vw] sm:text-[14vw] lg:text-[15vw] font-black uppercase text-blue-900 tracking-tight font-heading whitespace-nowrap leading-none">
           BARIÁTRICA
         </span>
       </div>

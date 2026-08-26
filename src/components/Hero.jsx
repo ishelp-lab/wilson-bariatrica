@@ -33,6 +33,16 @@ export default function Hero() {
         </svg>
       </div>
 
+      {/* Mobile Background Doctor Image (Mobile Only) */}
+      <div className="lg:hidden absolute inset-0 pointer-events-none overflow-hidden z-0">
+        <img
+          src="/assets/dr-wilson-perfil.jpg"
+          alt="Dr. Wilson Paulo dos Santos"
+          className="w-full h-full object-cover object-[center_20%] opacity-65 filter contrast-110 brightness-95"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#040c18]/30 via-[#040c18]/65 to-[#040c18]" />
+      </div>
+
       {/* Grid Mesh Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e3a8a10_1px,transparent_1px),linear-gradient(to_bottom,#1e3a8a10_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
@@ -124,8 +134,8 @@ export default function Hero() {
 
           </div>
 
-          {/* Right Image Showcase */}
-          <div className="lg:col-span-5 relative">
+          {/* Right Image Showcase (Desktop Only) */}
+          <div className="hidden lg:block lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
 
               {/* Outer decorative ring */}

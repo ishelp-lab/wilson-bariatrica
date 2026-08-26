@@ -5,35 +5,42 @@ import WhatsAppIcon from './WhatsAppIcon';
 export default function VideoTestimonials() {
   const whatsappUrl = "https://wa.me/5541995245847?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20cirurgia%20bari%C3%A1trica%20com%20o%20Dr.%20Wilson%20Paulo%20dos%20Santos.";
 
-  // Lista de depoimentos em vídeo preparada para você inserir seus links de vídeo futuramente.
-  // Pode usar URLs diretas do YouTube/Vimeo (com embed), reels ou arquivos de vídeo local/MP4.
   const videoTestimonials = [
     {
       id: 1,
-      title: "Depoimento de Transformação #1",
-      patientName: "Paciente Real",
+      title: "Depoimento - Guilherme",
+      patientName: "Guilherme",
       procedure: "Cirurgia Bariátrica",
-      thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800",
-      videoUrl: "", // Insira aqui a URL do seu vídeo embutido (ex: https://www.youtube.com/embed/SEU_VIDEO) ou caminho do mp4
+      thumbnail: "",
+      videoUrl: "/assets/videos/video-guilherme.mp4",
       quote: "Mudança completa de hábitos, saúde restaurada e mais disposição para a rotina diária."
     },
     {
       id: 2,
-      title: "Depoimento de Transformação #2",
-      patientName: "Paciente Real",
+      title: "Depoimento - Kauana",
+      patientName: "Kauana",
       procedure: "Bypass Gástrico",
-      thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
-      videoUrl: "", // Insira aqui a URL do seu vídeo embutido
+      thumbnail: "",
+      videoUrl: "/assets/videos/video-kauana.mp4",
       quote: "Recuperação muito tranquila com a técnica videolaparoscópica do Dr. Wilson."
     },
     {
       id: 3,
-      title: "Depoimento de Transformação #3",
-      patientName: "Paciente Real",
+      title: "Depoimento - Larissa",
+      patientName: "Larissa",
       procedure: "Sleeve Gástrico",
-      thumbnail: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800",
-      videoUrl: "", // Insira aqui a URL do seu vídeo embutido
+      thumbnail: "",
+      videoUrl: "/assets/videos/video-larissa.mp4",
       quote: "Suporte completo da equipe e excelente qualidade de vida pós-procedimento."
+    },
+    {
+      id: 4,
+      title: "Depoimento - Luana",
+      patientName: "Luana",
+      procedure: "Cirurgia Bariátrica",
+      thumbnail: "",
+      videoUrl: "/assets/videos/video-luana.mp4",
+      quote: "Transformação de vida com acompanhamento humanizado e total segurança."
     }
   ];
 
@@ -65,7 +72,7 @@ export default function VideoTestimonials() {
         </div>
 
         {/* Video Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {videoTestimonials.map((item) => (
             <div
               key={item.id}
@@ -73,21 +80,32 @@ export default function VideoTestimonials() {
             >
               <div>
                 {/* Video / Player Container */}
-                <div className="relative aspect-video bg-slate-900 overflow-hidden">
+                <div className="relative bg-slate-950 flex items-center justify-center min-h-[380px] sm:min-h-[440px] overflow-hidden">
                   {item.videoUrl ? (
-                    <iframe
-                      src={item.videoUrl}
-                      title={item.title}
-                      className="w-full h-full border-0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
+                    item.videoUrl.endsWith('.mp4') ? (
+                      <video
+                        src={item.videoUrl}
+                        controls
+                        playsInline
+                        preload="metadata"
+                        poster={item.thumbnail || undefined}
+                        className="w-full h-full max-h-[500px] object-contain"
+                      />
+                    ) : (
+                      <iframe
+                        src={item.videoUrl}
+                        title={item.title}
+                        className="w-full h-full border-0 aspect-video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    )
                   ) : (
                     <div className="relative w-full h-full">
                       <img
                         src={item.thumbnail}
                         alt={item.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 opacity-80"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#040c18] via-black/40 to-transparent" />
                       
@@ -108,18 +126,18 @@ export default function VideoTestimonials() {
                 </div>
 
                 {/* Content Details */}
-                <div className="p-6 space-y-3">
+                <div className="p-5 space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold text-sky-400 uppercase tracking-wider px-2.5 py-1 rounded-md bg-blue-950/80 border border-blue-800">
                       {item.procedure}
                     </span>
                     <div className="flex items-center gap-1 text-slate-400 text-xs">
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                      <span>Paciente Real</span>
+                      <span>{item.patientName}</span>
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-white font-heading">
+                  <h3 className="text-base font-bold text-white font-heading">
                     {item.title}
                   </h3>
 
@@ -131,7 +149,7 @@ export default function VideoTestimonials() {
               </div>
 
               {/* Bottom Card Footer */}
-              <div className="px-6 pb-6 pt-2">
+              <div className="px-5 pb-5 pt-2">
                 <a
                   href={whatsappUrl}
                   target="_blank"
@@ -144,13 +162,6 @@ export default function VideoTestimonials() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Helper Note for User */}
-        <div className="mt-12 p-4 rounded-2xl bg-blue-950/40 border border-blue-900/60 text-center max-w-xl mx-auto">
-          <p className="text-xs text-slate-400">
-            💡 <strong className="text-sky-300">Espaço preparado para vídeos:</strong> Os vídeos acima estão prontos para receber seus arquivos MP4 ou links incorporados do YouTube/Vimeo/Reels.
-          </p>
         </div>
 
       </div>
