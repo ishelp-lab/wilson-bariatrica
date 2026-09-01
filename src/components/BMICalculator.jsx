@@ -41,7 +41,7 @@ export default function BMICalculator() {
         glowColor: 'rgba(245, 158, 11, 0.8)',
         badgeBg: 'bg-amber-950/80 border-amber-500 text-amber-300',
         cardBorder: 'border-amber-500/60 shadow-amber-950/30',
-        description: 'Sinal de atenção para ganho de peso. Indicado acompanhamento nutricional ou cirurgias gerais (hérnia, vesícula).',
+        description: 'Sinal de atenção para ganho de peso. Indicado acompanhamento nutricional preventivo e reeducação alimentar.',
         eligibleForBariatric: false,
       };
     } else if (val >= 30.0 && val <= 34.9) {

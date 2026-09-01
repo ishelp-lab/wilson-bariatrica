@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Sparkles, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -112,17 +112,17 @@ export default function Testimonials() {
     },
   ];
 
-  // Responsiveness: 1.25 em telas muito pequenas, 1.45 no mobile, 2.3 em tablets e 3.25 em desktop
+  // Responsiveness: 1.15 em telas muito pequenas, 1.35 no mobile, 2.2 em tablets e 3.2 em desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 480) {
-        setCardsToShow(1.2);
+        setCardsToShow(1.15);
       } else if (window.innerWidth < 640) {
-        setCardsToShow(1.45);
+        setCardsToShow(1.35);
       } else if (window.innerWidth < 1024) {
-        setCardsToShow(2.3);
+        setCardsToShow(2.2);
       } else {
-        setCardsToShow(3.25);
+        setCardsToShow(3.2);
       }
     };
 
@@ -230,65 +230,51 @@ export default function Testimonials() {
               {transformations.map((item) => (
                 <div
                   key={item.id}
-                  className="shrink-0 bg-white rounded-3xl p-5 border border-slate-200 shadow-xl flex flex-col justify-between hover:shadow-2xl hover:border-blue-300 transition-all duration-300 group"
+                  className="shrink-0 bg-white rounded-3xl p-3 sm:p-4 border border-slate-200/90 shadow-xl hover:shadow-2xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between group"
                   style={{
                     width: `calc((100% - ${(cardsToShow - 1) * 1.5}rem) / ${cardsToShow})`,
                   }}
                 >
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     
-                    {/* Dark Frame Container for Before & After Images */}
-                    <div className="bg-[#050f21] p-3 rounded-2xl border border-blue-900/80 shadow-lg">
+                    {/* Split Photos Grid */}
+                    <div className="grid grid-cols-2 gap-2 sm:gap-3">
                       
-                      {/* Header Labels */}
-                      <div className="grid grid-cols-2 gap-2 mb-2">
-                        <div className="py-1 text-center bg-[#091b3b] rounded-lg border border-blue-800/60 text-white font-heading font-extrabold text-xs tracking-wide">
-                          Antes
-                        </div>
-                        <div className="py-1 text-center bg-blue-600 rounded-lg text-white font-heading font-extrabold text-xs tracking-wide">
-                          Depois
-                        </div>
-                      </div>
-
-                      {/* Split Photos */}
-                      <div className="grid grid-cols-2 gap-2 relative rounded-xl overflow-hidden">
-                        
-                        {/* Antes Photo Frame */}
-                        <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10">
-                          <img
-                            src={item.antesImg}
-                            alt={`Paciente ${item.patientName} Antes`}
-                            className="w-full h-full object-cover object-center filter contrast-[1.05]"
-                          />
-                          <span className="absolute bottom-2 left-2 text-[10px] font-bold text-amber-300 bg-black/70 px-1.5 py-0.5 rounded backdrop-blur-sm">
-                            Pré-Op
+                      {/* Antes Photo Frame */}
+                      <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-sm">
+                        <img
+                          src={item.antesImg}
+                          alt={`Paciente ${item.patientName} Antes`}
+                          className="w-full h-full object-cover object-center filter contrast-[1.03]"
+                        />
+                        {/* Floating Antes Badge */}
+                        <div className="absolute top-2 left-2">
+                          <span className="text-[11px] font-extrabold uppercase tracking-wide text-slate-900 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-md inline-block">
+                            Antes
                           </span>
                         </div>
-
-                        {/* Depois Photo Frame */}
-                        <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-blue-400/40">
-                          <img
-                            src={item.depoisImg}
-                            alt={`Paciente ${item.patientName} Depois`}
-                            className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
-                          />
-                        </div>
-
                       </div>
 
-                      {/* Doctor Seal Watermark */}
-                      <div className="mt-2.5 pt-2 border-t border-blue-900/60 flex items-center justify-center px-1">
-                        <div className="flex items-center gap-1.5">
-                          <ShieldCheck className="w-3.5 h-3.5 text-sky-400" />
-                          <span className="font-signature text-base text-white">Dr. Wilson Paulo</span>
+                      {/* Depois Photo Frame */}
+                      <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-blue-50/50 border border-blue-200 shadow-sm">
+                        <img
+                          src={item.depoisImg}
+                          alt={`Paciente ${item.patientName} Depois`}
+                          className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                        {/* Floating Depois Badge */}
+                        <div className="absolute top-2 right-2">
+                          <span className="text-[11px] font-extrabold uppercase tracking-wide text-white bg-blue-600/95 backdrop-blur-md px-2.5 py-1 rounded-lg shadow-md border border-blue-400/40 inline-block">
+                            Depois
+                          </span>
                         </div>
                       </div>
 
                     </div>
 
-                    {/* Patient Summary Header */}
-                    <div className="text-center pt-1">
-                      <h3 className="text-base font-extrabold text-slate-900 font-heading">
+                    {/* Patient Name */}
+                    <div className="text-center pt-1 pb-1">
+                      <h3 className="text-base sm:text-lg font-extrabold text-slate-900 font-heading">
                         {item.patientName}
                       </h3>
                     </div>

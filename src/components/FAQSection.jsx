@@ -31,8 +31,8 @@ export default function FAQSection() {
       a: 'O protocolo ERAS (Enhanced Recovery After Surgery) é um conjunto de condutas científicas para otimizar o preparo pré-operatório, minimizar o estresse cirúrgico e proporcionar analgesia moderna sem opióides, permitindo que o paciente caminhe e se alimente logo nas primeiras horas pós-cirurgia.',
     },
     {
-      q: 'Como funciona a cirurgia de hérnia e vesícula por videolaparoscopia?',
-      a: 'São cirurgias minimamente invasivas em que a remoção da vesícula ou o reparo da hérnia (com tela sintética de alta tecnologia) é feito através de 3 ou 4 incisões milimétricas. O paciente geralmente vai para casa no dia seguinte com recuperação estética e pouca dor.',
+      q: 'Como funciona a cirurgia de vesícula (colecistectomia) por videolaparoscopia?',
+      a: 'É uma cirurgia minimamente invasiva em que a remoção da vesícula doente com cálculos é realizada através de 3 ou 4 incisões milimétricas. O paciente geralmente recebe alta hospitalar em até 24 horas, com recuperação rápida, cicatrizes discretas e mínimo desconforto.',
     },
   ];
 

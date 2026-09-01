@@ -205,11 +205,10 @@ export default function ContactSection() {
                         onChange={(e) => setFormData({ ...formData, procedure: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-[#051124] border border-blue-800 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors shadow-inner"
                       >
-                        <option value="Bariátrica / Metabólica">Cirurgia Bariátrica / Metabólica</option>
-                        <option value="Cirurgia de Vesícula">Colecistectomia (Vesícula)</option>
-                        <option value="Cirurgia de Hérnia">Hérnia Abdominal / Inguinal</option>
-                        <option value="Diástase Abdominal">Correção de Diástase</option>
-                        <option value="Reganho de Peso">Tratamento para Reganho de Peso</option>
+                        <option value="Cirurgia Bariátrica (Bypass & Sleeve)">Cirurgia Bariátrica (Bypass & Sleeve)</option>
+                        <option value="Cirurgia Metabólica para Diabetes">Cirurgia Metabólica para Diabetes</option>
+                        <option value="Colecistectomia (Cirurgia de Vesícula)">Colecistectomia (Cirurgia de Vesícula)</option>
+                        <option value="Avaliação Médica Geral">Outras Dúvidas / Avaliação Geral</option>
                       </select>
                     </div>
                   </div>

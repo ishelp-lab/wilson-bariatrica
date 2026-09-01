@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Stethoscope, Activity, Sparkles, Flame, Shield, RefreshCw, ArrowRight } from 'lucide-react';
+import { Stethoscope, Activity, Sparkles, ArrowRight } from 'lucide-react';
 import ProcedureModal from './ProcedureModal';
 
 export default function Procedures() {
@@ -38,21 +38,6 @@ export default function Procedures() {
       ]
     },
     {
-      id: 'hernia',
-      icon: Shield,
-      title: 'Cirurgia de Hérnia Abdominal & Inguinal',
-      subtitle: 'Correção Laparoscópica com Telas de Alta Tecnologia',
-      tag: 'Músculos Abdominais',
-      summary: 'Reparo seguro de hérnias umbilicais, inguinais e incisionais sem necessidade de grandes cortes.',
-      text: 'A correção laparoscópica de hérnias utiliza pequenas incisões para posicionar uma tela de reforço sintética de alta biocompatibilidade por trás da parede muscular, eliminando o abaulamento com retorno rápido às atividades.',
-      bullets: [
-        'Incisões milimétricas com preservação estética',
-        'Taxa de recidiva (retorno da hérnia) inferior a 1%',
-        'Menor necessidade de analgésicos no pós-operatório',
-        'Retorno rápido às atividades profissionais'
-      ]
-    },
-    {
       id: 'vesicula',
       icon: Sparkles,
       title: 'Colecistectomia (Cirurgia de Vesícula)',
@@ -65,36 +50,6 @@ export default function Procedures() {
         'Prevenção definitiva de crises de cólica biliar',
         'Internação de apenas 1 dia na maioria dos casos',
         'Retorno gradual à alimentação normal sem desconforto'
-      ]
-    },
-    {
-      id: 'diastase',
-      icon: Flame,
-      title: 'Correção de Diástase Abdominal',
-      subtitle: 'Reaproximação Muscular Pós-Gestação ou Perda de Peso',
-      tag: 'Funcional & Estético',
-      summary: 'Restaurando o tônus abdominal, estabilidade da coluna e contorno corporal.',
-      text: 'A diástase dos músculos retos abdominais (comum após a gestação ou grandes oscilações de peso) causa fraqueza no core, dores lombares e projeção abdominal persistente. A cirurgia restaura a anatomia muscular original.',
-      bullets: [
-        'Recuperação do tônus e estabilidade da parede abdominal',
-        'Alívio efetivo de dores lombares crônicas associadas',
-        'Associação possível com abdominoplastia quando indicada',
-        'Resultado funcional e harmonioso'
-      ]
-    },
-    {
-      id: 'reganho',
-      icon: RefreshCw,
-      title: 'Revisão e Reganho de Peso Pós-Bariátrica',
-      subtitle: 'Protocolo de Readequação Anatômica & Comportamental',
-      tag: 'Suporte 360°',
-      summary: 'Investigação acolhedora e tratamentos cirúrgicos ou endoscópicos para recuperar os resultados.',
-      text: 'O reganho de peso pós-bariátrica exige uma abordagem sem julgamentos. Investigamos aspectos anatômicos (dilatação da sutura ou pouch) e metabólicos/comportamentais, oferecendo procedimentos revisionais cirúrgicos ou endoscópicos acompanhados por nutrição e psicologia.',
-      bullets: [
-        'Avaliação anatômica e metabólica minuciosa',
-        'Opções revisionais por videolaparoscopia ou argônio',
-        'Reeducação nutricional e acompanhamento psicológico',
-        'Foco no resgate da autoestima e metas de saúde'
       ]
     }
   ];
