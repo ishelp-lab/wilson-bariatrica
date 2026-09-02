@@ -25,6 +25,7 @@ export default function Navbar() {
     { name: 'TRANSFORMAÇÕES', href: '#transformacoes' },
     { name: 'SOBRE MIM', href: '#sobre' },
     { name: 'CALCULADORA IMC', href: '#calculadora' },
+    { name: 'PAGAMENTO & CONVÊNIOS', href: '#formas-de-pagamento' },
     { name: 'CONTATO', href: '#contato' },
   ];
 

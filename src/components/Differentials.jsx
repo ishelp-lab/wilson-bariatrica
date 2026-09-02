@@ -12,8 +12,8 @@ export default function Differentials() {
     {
       icon: Zap,
       title: 'Protocolo ERAS de Recuperação Acelerada',
-      desc: 'Metodologia internacional que reduz dores pós-operatórias, descontinua o uso prolongado de soros e acelera a alta hospitalar em 24h a 48h.',
-      tag: 'Alta Segura em 24h',
+      desc: 'Metodologia internacional que reduz dores pós-operatórias, descontinua o uso prolongado de soros e acelera a alta hospitalar em 48h.',
+      tag: 'Alta Segura em 48h',
     },
     {
       icon: Users,

@@ -58,7 +58,7 @@ export default function ProcedureModal({ procedure, onClose }) {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
           <div className="flex items-center gap-2 text-xs text-slate-300">
             <Clock className="w-4 h-4 text-sky-400" />
-            <span>Internação média: 24h a 48h (Videolaparoscopia)</span>
+            <span>Internação média: 48h (Videolaparoscopia)</span>
           </div>
 
           <a

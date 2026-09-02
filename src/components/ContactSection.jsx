@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Clock, Calendar, MessageCircle, Send, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Clock, Calendar, MessageCircle, Send, CheckCircle2, CreditCard } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
 export default function ContactSection() {
@@ -7,7 +7,8 @@ export default function ContactSection() {
     name: '',
     phone: '',
     email: '',
-    procedure: 'Bariátrica / Metabólica',
+    procedure: 'Cirurgia Bariátrica (Bypass & Sleeve)',
+    paymentType: 'Particular (com parcelamento no cartão)',
     message: '',
   });
 
@@ -17,7 +18,7 @@ export default function ContactSection() {
     e.preventDefault();
     setSubmitted(true);
     
-    const text = `Ol%C3%A1%20Dr.%20Wilson!%20Meu%20nome%20%C3%A9%20${encodeURIComponent(formData.name)}.%20Gostaria%20de%20agendar%20uma%20consulta.%20Interesse:%20${encodeURIComponent(formData.procedure)}.%20Telefone:%20${encodeURIComponent(formData.phone)}.%20Mensagem:%20${encodeURIComponent(formData.message)}`;
+    const text = `Ol%C3%A1%20Dr.%20Wilson!%20Meu%20nome%20%C3%A9%20${encodeURIComponent(formData.name)}.%20Gostaria%20de%20agendar%20uma%20consulta.%20Interesse:%20${encodeURIComponent(formData.procedure)}.%20Forma%20de%20Pagamento:%20${encodeURIComponent(formData.paymentType)}.%20Telefone:%20${encodeURIComponent(formData.phone)}.%20Mensagem:%20${encodeURIComponent(formData.message)}`;
     window.open(`https://wa.me/5541995245847?text=${text}`, '_blank');
   };
 
@@ -105,6 +106,17 @@ export default function ContactSection() {
                     <h4 className="text-white font-bold text-sm">Horário de Atendimento</h4>
                     <p className="text-xs text-slate-300 mt-0.5">Segunda a Sexta: 08:00 às 19:00</p>
                     <p className="text-xs text-slate-300">Sábados (Telemedicina): 08:00 às 12:00</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 pt-2 border-t border-blue-900/60">
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-600/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 shrink-0">
+                    <CreditCard className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-sm">Formas de Pagamento</h4>
+                    <p className="text-xs text-slate-300 mt-0.5 font-medium">Particular e Convênios Médicos</p>
+                    <p className="text-xs text-sky-300 mt-0.5 font-semibold">Parcelamento no cartão para particulares</p>
                   </div>
                 </div>
               </div>
@@ -211,6 +223,25 @@ export default function ContactSection() {
                         <option value="Avaliação Médica Geral">Outras Dúvidas / Avaliação Geral</option>
                       </select>
                     </div>
+                  </div>
+
+                  {/* Forma de Pagamento */}
+                  <div className="space-y-1.5">
+                    <label htmlFor="paymentTypeSelect" className="text-xs font-bold text-slate-200">
+                      Forma de Pagamento Pretendida
+                    </label>
+                    <select
+                      id="paymentTypeSelect"
+                      value={formData.paymentType}
+                      onChange={(e) => setFormData({ ...formData, paymentType: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl bg-[#051124] border border-blue-800 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors shadow-inner"
+                    >
+                      <option value="Particular (com parcelamento no cartão)">Particular (com parcelamento no cartão de crédito)</option>
+                      <option value="Convênio Médico">Convênio Médico (Plano de Saúde)</option>
+                    </select>
+                    <p className="text-[11px] text-sky-300 font-medium">
+                      * Para atendimentos particulares, disponibilizamos parcelamento no cartão de crédito.
+                    </p>
                   </div>
 
                   <div className="space-y-1.5">

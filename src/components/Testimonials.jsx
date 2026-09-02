@@ -10,7 +10,7 @@ export default function Testimonials() {
   const transformations = [
     {
       id: 1,
-      patientName: 'Paula',
+      patientName: 'Brenda',
       antesImg: '/assets/transformacao-1-antes.jpg',
       depoisImg: '/assets/transformacao-1-depois.jpg',
     },

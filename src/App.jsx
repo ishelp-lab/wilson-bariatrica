@@ -7,6 +7,7 @@ import AboutDoctor from './components/AboutDoctor';
 import BMICalculator from './components/BMICalculator';
 import Procedures from './components/Procedures';
 import PatientJourney from './components/PatientJourney';
+import PaymentMethods from './components/PaymentMethods';
 import FAQSection from './components/FAQSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -24,6 +25,7 @@ export default function App() {
         <BMICalculator />
         <Procedures />
         <PatientJourney />
+        <PaymentMethods />
         <FAQSection />
         <ContactSection />
       </main>

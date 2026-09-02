@@ -19,8 +19,12 @@ export default function FAQSection() {
       a: 'Sim! A Cirurgia Bariátrica por videolaparoscopia consta no rol de procedimentos obrigatórios da ANS (Agência Nacional de Saúde Suplementar). Nossa equipe auxilia e fornece toda a documentação médica necessária para a solicitação de autorização junto ao seu plano.',
     },
     {
+      q: 'Quais são as formas de pagamento disponíveis?',
+      a: 'Atendemos tanto por Convênio Médico quanto na modalidade Particular. Para pacientes particulares, oferecemos condições facilitadas com parcelamento no cartão de crédito.',
+    },
+    {
       q: 'Quanto tempo dura a internação hospitalar e a recuperação pós-operatória?',
-      a: 'Graças à técnica por videolaparoscopia (com pequenos furos de 5mm) e ao Protocolo ERAS de recuperação rápida, a maioria dos pacientes recebe alta hospitalar entre 24h e 48h após o procedimento. O retorno a atividades de escritório costuma ocorrer em 7 a 14 dias.',
+      a: 'Graças à técnica por videolaparoscopia (com pequenos furos de 5mm) e ao Protocolo ERAS de recuperação rápida, a maioria dos pacientes recebe alta hospitalar em 48h após o procedimento. O retorno a atividades de escritório costuma ocorrer em 7 a 14 dias.',
     },
     {
       q: 'Posso fazer o acompanhamento pré e pós-operatório por Telemedicina?',
@@ -32,7 +36,7 @@ export default function FAQSection() {
     },
     {
       q: 'Como funciona a cirurgia de vesícula (colecistectomia) por videolaparoscopia?',
-      a: 'É uma cirurgia minimamente invasiva em que a remoção da vesícula doente com cálculos é realizada através de 3 ou 4 incisões milimétricas. O paciente geralmente recebe alta hospitalar em até 24 horas, com recuperação rápida, cicatrizes discretas e mínimo desconforto.',
+      a: 'É uma cirurgia minimamente invasiva em que a remoção da vesícula doente com cálculos é realizada através de 3 ou 4 incisões milimétricas. O paciente geralmente recebe alta hospitalar em 48 horas, com recuperação rápida, cicatrizes discretas e mínimo desconforto.',
     },
   ];
 

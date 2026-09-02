@@ -29,9 +29,9 @@ export default function PatientJourney() {
       icon: Stethoscope,
       title: 'Cirurgia Minimamente Invasiva',
       tag: 'Videolaparoscopia 3D',
-      desc: 'Procedimento cirúrgico preciso em hospital de referência em Curitiba. Furos milimétricos com alta hospitalar em 24h a 48h pelo Protocolo ERAS.',
+      desc: 'Procedimento cirúrgico preciso em hospital de referência em Curitiba. Furos milimétricos com alta hospitalar em 48h pelo Protocolo ERAS.',
       image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800',
-      badgeText: 'Alta em 24h a 48h',
+      badgeText: 'Alta em 48h',
       keyPoint: 'Hospitais de Excelência em Curitiba',
     },
     {

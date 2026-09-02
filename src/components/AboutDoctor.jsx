@@ -61,14 +61,14 @@ export default function AboutDoctor() {
               {/* Outer Glow */}
               <div className="absolute -inset-2 bg-gradient-to-tr from-blue-400 to-indigo-500 rounded-3xl opacity-20 blur-xl pointer-events-none" />
 
-              <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-2xl aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] max-h-[480px]">
+              <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-2xl aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] max-h-[520px]">
                 <img
-                  src="/assets/dr-wilson-real.jpg"
+                  src="/assets/dr-wilson-jaleco.jpg"
                   alt="Dr. Wilson Paulo dos Santos"
-                  className="w-full h-full object-cover object-[center_35%] transform hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-[center_25%] transform hover:scale-105 transition-transform duration-700"
                 />
                 
-                <div className="p-6 bg-slate-900 border-t border-slate-800">
+                <div className="p-5 sm:p-6 bg-slate-900 border-t border-slate-800">
                   <div className="flex items-center gap-3">
                     <div className="w-11 h-11 rounded-xl bg-blue-600/20 border border-blue-400/40 flex items-center justify-center text-sky-300">
                       <Stethoscope className="w-6 h-6" />
@@ -111,7 +111,7 @@ export default function AboutDoctor() {
             </p>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Com o uso de tecnologia por videolaparoscopia 3D e o **Protocolo ERAS de Recuperação Acelerada**, os procedimentos são realizados através de pequenas incisões milimétricas, proporcionando menor dor pós-operatória e alta hospitalar precoce em 24h a 48h.
+              Com o uso de tecnologia por videolaparoscopia 3D e o **Protocolo ERAS de Recuperação Acelerada**, os procedimentos são realizados através de pequenas incisões milimétricas, proporcionando menor dor pós-operatória e alta hospitalar precoce em 48h.
             </p>
 
             {/* Credentials Grid */}

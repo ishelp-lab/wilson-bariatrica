@@ -25,7 +25,7 @@ export default function MetricsBar() {
       icon: Zap,
       value: 'Protocolo ERAS',
       label: 'Recuperação Acelerada',
-      sublabel: 'Alta hospitalar em 24h a 48h',
+      sublabel: 'Alta hospitalar em 48h',
     },
   ];
 

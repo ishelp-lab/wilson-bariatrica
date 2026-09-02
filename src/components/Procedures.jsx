@@ -17,7 +17,7 @@ export default function Procedures() {
       bullets: [
         'Perda média de 30% a 40% do peso corporal total',
         'Remissão imediata ou controle rigoroso do Diabetes Tipo 2',
-        'Alta hospitalar precoce (geralmente entre 24h e 48h)',
+        'Alta hospitalar precoce (geralmente em 48h)',
         'Recuperação estética com cicatrizes imperceptíveis',
         'Acompanhamento continuado por equipe multidisciplinar'
       ]
@@ -42,13 +42,13 @@ export default function Procedures() {
       icon: Sparkles,
       title: 'Colecistectomia (Cirurgia de Vesícula)',
       subtitle: 'Remoção de Cálculos Biliares por Videolaparoscopia',
-      tag: 'Internação de 24h',
-      summary: 'Solução definitiva para cólicas biliares e pedra na vesícula com alta no dia seguinte.',
+      tag: 'Internação de 48h',
+      summary: 'Solução definitiva para cólicas biliares e pedra na vesícula com alta segura em 48h.',
       text: 'A presença de pedras na vesícula biliar pode causar cólicas intensas, inflamação (colecistite) e complicações como pancreatite. A cirurgia por videolaparoscopia remove a vesícula doente com máxima segurança anatômica.',
       bullets: [
         'Procedimento rápido e amplamente consolidado',
         'Prevenção definitiva de crises de cólica biliar',
-        'Internação de apenas 1 dia na maioria dos casos',
+        'Internação média de 48h com rápida recuperação',
         'Retorno gradual à alimentação normal sem desconforto'
       ]
     }
