@@ -1,7 +1,9 @@
 import React from 'react';
-import { ShieldCheck, Calculator, CheckCircle2, ArrowRight, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ShieldCheck, Calculator, CheckCircle2, ArrowRight, Shield, Smartphone } from 'lucide-react';
 import BrandLogo from './BrandLogo';
 import WhatsAppIcon from './WhatsAppIcon';
+
 
 export default function Hero() {
   const whatsappUrl = "https://wa.me/5541995245847?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20cirurgia%20bari%C3%A1trica%20com%20o%20Dr.%20Wilson%20Paulo%20dos%20Santos.";
@@ -102,6 +104,20 @@ export default function Hero() {
                 <span>Calcular meu IMC</span>
               </a>
             </div>
+
+            {/* Botão Cirurgia Programada */}
+            <div className="pt-1 flex items-center justify-center lg:justify-start">
+              <Link
+                to="/cirurgia-programada"
+                id="hero-btn-cirurgia-programada"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-600/20 hover:from-emerald-500/35 hover:to-teal-600/35 text-emerald-300 hover:text-emerald-200 font-bold text-sm border border-emerald-500/40 hover:border-emerald-400/70 transition-all duration-300 hover:-translate-y-0.5 group shadow-lg shadow-emerald-900/20"
+              >
+                <Smartphone className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform" />
+                <span>💳 Cirurgia Programada · Parcele no PIX sem cartão</span>
+                <ArrowRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
 
             {/* Trust List Badges */}
             <div className="pt-6 border-t border-blue-950/80 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-3 text-xs sm:text-sm text-slate-300">

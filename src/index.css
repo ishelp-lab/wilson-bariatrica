@@ -130,6 +130,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+.text-gradient-pix {
+  background: linear-gradient(135deg, #6ee7b7 0%, #10b981 40%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 /* Instagram Post Headline Underline Accent */
 .underline-accent {
   position: relative;

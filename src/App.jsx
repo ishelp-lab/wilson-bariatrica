@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Hero from './components/Hero';
 import MetricsBar from './components/MetricsBar';
 import Testimonials from './components/Testimonials';
@@ -12,8 +13,9 @@ import FAQSection from './components/FAQSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import CirurgiaProgramada from './pages/CirurgiaProgramada';
 
-export default function App() {
+function MainSite() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-blue-950 selection:text-white">
       <main>
@@ -34,4 +36,14 @@ export default function App() {
     </div>
   );
 }
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<MainSite />} />
+      <Route path="/cirurgia-programada" element={<CirurgiaProgramada />} />
+    </Routes>
+  );
+}
+
 
