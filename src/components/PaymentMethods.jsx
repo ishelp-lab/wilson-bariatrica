@@ -1,6 +1,8 @@
 import React from 'react';
-import { CreditCard, ShieldCheck, Building2, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { CreditCard, ShieldCheck, Building2, CheckCircle2, ArrowRight, Smartphone } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
+
 
 export default function PaymentMethods() {
   const whatsappBase = "https://wa.me/5541995245847?text=";
@@ -134,7 +136,65 @@ export default function PaymentMethods() {
 
         </div>
 
-        {/* Small Bottom Informational Banner */}
+        {/* Card 3: Cirurgia Programada – PIX Parcelado */}
+        <div className="mt-8 max-w-5xl mx-auto">
+          <div className="rounded-3xl bg-gradient-to-br from-[#071e18] to-[#081c3c] border border-emerald-600/40 hover:border-emerald-500/70 p-7 sm:p-9 shadow-2xl transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden">
+            {/* Subtle glow accent */}
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] pointer-events-none" />
+
+            <div className="relative z-10 flex flex-col lg:flex-row lg:items-center gap-8">
+              {/* Left: icon + title + desc */}
+              <div className="flex-1 space-y-5">
+                <div className="flex items-center justify-between lg:justify-start lg:gap-4">
+                  <div className="w-14 h-14 rounded-2xl bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center text-emerald-300 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 shadow-inner">
+                    <Smartphone className="w-7 h-7" />
+                  </div>
+                  <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+                    PIX Parcelado
+                  </span>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-black font-heading text-white mb-2">
+                    Cirurgia Programada
+                  </h3>
+                  <p className="text-sm text-slate-300 leading-relaxed">
+                    Parcele sua cirurgia diretamente no PIX, no seu ritmo, sem cartão de crédito e sem análise de crédito. Você define o valor de cada depósito e agenda a data assim que atingir 10% do orçamento.
+                  </p>
+                </div>
+
+                <div className="grid sm:grid-cols-3 gap-3 pt-2 border-t border-emerald-900/50">
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-200">Sem análise de crédito ou avalista</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-200">Você define o valor de cada depósito</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-200">Agende a cirurgia com apenas 10% pago</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right: CTA */}
+              <div className="lg:shrink-0">
+                <Link
+                  to="/cirurgia-programada"
+                  id="payment-btn-cirurgia-programada"
+                  className="w-full lg:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-teal-500 text-white font-extrabold text-sm shadow-xl shadow-emerald-500/30 hover:shadow-emerald-400/50 transition-all duration-300 hover:-translate-y-0.5 group/btn border border-emerald-300/30 whitespace-nowrap"
+                >
+                  <span>Saiba como funciona</span>
+                  <ArrowRight className="w-4 h-4 text-emerald-200 group-hover/btn:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <div className="mt-12 max-w-3xl mx-auto p-5 rounded-2xl bg-blue-950/40 border border-blue-800/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div className="flex items-center gap-3">
             <ShieldCheck className="w-6 h-6 text-sky-400 shrink-0" />
