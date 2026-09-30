@@ -154,9 +154,9 @@ const STEPS = [
 
 const COLOR_MAP = {
   emerald: { ring: 'border-emerald-400/50', icon: 'bg-emerald-500/15 border-emerald-400/40 text-emerald-300', num: 'text-emerald-400', glow: 'bg-emerald-500/10' },
-  teal:    { ring: 'border-teal-400/50',    icon: 'bg-teal-500/15 border-teal-400/40 text-teal-300',       num: 'text-teal-400',    glow: 'bg-teal-500/10' },
-  sky:     { ring: 'border-sky-400/50',     icon: 'bg-sky-500/15 border-sky-400/40 text-sky-300',          num: 'text-sky-400',     glow: 'bg-sky-500/10' },
-  blue:    { ring: 'border-blue-400/50',    icon: 'bg-blue-500/15 border-blue-400/40 text-blue-300',       num: 'text-blue-400',    glow: 'bg-blue-500/10' },
+  teal: { ring: 'border-teal-400/50', icon: 'bg-teal-500/15 border-teal-400/40 text-teal-300', num: 'text-teal-400', glow: 'bg-teal-500/10' },
+  sky: { ring: 'border-sky-400/50', icon: 'bg-sky-500/15 border-sky-400/40 text-sky-300', num: 'text-sky-400', glow: 'bg-sky-500/10' },
+  blue: { ring: 'border-blue-400/50', icon: 'bg-blue-500/15 border-blue-400/40 text-blue-300', num: 'text-blue-400', glow: 'bg-blue-500/10' },
 };
 
 function HowItWorks() {
@@ -305,11 +305,10 @@ function FAQProgramada() {
           {FAQS.map((faq, i) => (
             <div
               key={i}
-              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
-                openIdx === i
+              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${openIdx === i
                   ? 'bg-[#081c3c] border-emerald-500/50 shadow-xl shadow-emerald-500/10'
                   : 'bg-[#081428] border-blue-800/40 hover:border-teal-700/50'
-              }`}
+                }`}
             >
               <button
                 onClick={() => toggle(i)}
