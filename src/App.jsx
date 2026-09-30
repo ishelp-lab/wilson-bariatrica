@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Hero from './components/Hero';
 import MetricsBar from './components/MetricsBar';
 import Testimonials from './components/Testimonials';
@@ -39,10 +40,13 @@ function MainSite() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<MainSite />} />
-      <Route path="/cirurgia-programada" element={<CirurgiaProgramada />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<MainSite />} />
+        <Route path="/cirurgia-programada" element={<CirurgiaProgramada />} />
+      </Routes>
+    </>
   );
 }
 
