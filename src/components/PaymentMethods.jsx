@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CreditCard, ShieldCheck, Building2, CheckCircle2, ArrowRight, Smartphone } from 'lucide-react';
+import { CreditCard, ShieldCheck, Building2, CheckCircle2, ArrowRight, CalendarCheck2 } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
 
@@ -134,7 +134,7 @@ export default function PaymentMethods() {
             </div>
           </div>
 
-          {/* Card 3: Cirurgia Programada – PIX Parcelado */}
+          {/* Card 3: Cirurgia Programada – Pré-pagamento Parcelado */}
           <div className="rounded-3xl bg-gradient-to-br from-[#071e18] to-[#081c3c] border border-emerald-600/40 hover:border-emerald-500/70 p-7 sm:p-9 shadow-2xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 group relative overflow-hidden">
             {/* Subtle glow accent */}
             <div className="absolute -top-20 -right-20 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] pointer-events-none" />
@@ -142,10 +142,10 @@ export default function PaymentMethods() {
             <div className="relative z-10 space-y-6">
               <div className="flex items-center justify-between">
                 <div className="w-14 h-14 rounded-2xl bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center text-emerald-300 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 shadow-inner">
-                  <Smartphone className="w-7 h-7" />
+                  <CalendarCheck2 className="w-7 h-7" />
                 </div>
                 <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
-                  PIX Parcelado
+                  Pré-pagamento
                 </span>
               </div>
 
@@ -154,7 +154,7 @@ export default function PaymentMethods() {
                   Cirurgia Programada
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
-                  Parcele sua cirurgia diretamente no PIX, no seu ritmo, sem cartão de crédito e sem análise de crédito. Você define o valor de cada depósito e agenda a data assim que atingir 10% do orçamento.
+                  Modalidade de pagamento antecipado: você deposita parcelas antes da cirurgia, no seu ritmo, sem análise de crédito. Agende a data assim que atingir 10% do orçamento e opere ao atingir 85%.
                 </p>
               </div>
 
@@ -165,7 +165,7 @@ export default function PaymentMethods() {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                  <span className="text-sm text-slate-200">Você define o valor de cada depósito</span>
+                  <span className="text-sm text-slate-200">Você define o valor e o ritmo de cada depósito</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />

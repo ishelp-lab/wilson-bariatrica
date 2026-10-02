@@ -10,7 +10,7 @@ import WhatsAppIcon from '../components/WhatsAppIcon';
 import FloatingWhatsApp from '../components/FloatingWhatsApp';
 
 const WHATSAPP_URL =
-  'https://wa.me/5541995245847?text=Ol%C3%A1%21%20Vim%20pela%20campanha%20de%20Cirurgia%20Programada%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20pagamento%20parcelado%20no%20PIX.';
+  'https://wa.me/5541995245847?text=Ol%C3%A1%21%20Vim%20pela%20campanha%20de%20Cirurgia%20Programada%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20pagamento%20antecipado%20parcelado.';
 
 // ──────────────────────────────────────────────────────────
 // NAVBAR
@@ -69,16 +69,16 @@ function CpHero() {
         <div className="text-center max-w-5xl mx-auto">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white font-heading leading-[1.05] tracking-tight mb-6">
             REALIZE SUA CIRURGIA{' '}
-            <span className="text-gradient-pix">PARCELANDO NO PIX</span>
+            <span className="text-gradient-pix">PARCELANDO ANTES</span>
             <br />
             <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-300">
-              sem cartão de crédito
+              sem análise de crédito
             </span>
           </h1>
 
           <p className="text-slate-300 text-lg sm:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto mb-10">
-            Com a <strong className="text-white">Cirurgia Programada</strong>, você deposita no seu ritmo via PIX,{' '}
-            <strong className="text-emerald-300">agenda a data com apenas 10% pago</strong> e realiza o procedimento com o Dr. Wilson assim que atingir a condição acordada.
+            Com a <strong className="text-white">Cirurgia Programada</strong>, você deposita parcelas{' '}
+            <strong className="text-emerald-300">antes da cirurgia, no seu ritmo</strong>, sem análise de crédito e sem cartão. Agende a data com apenas 10% pago e opere ao atingir a condição acordada.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -90,7 +90,7 @@ function CpHero() {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-5 rounded-2xl bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-teal-500 text-white font-extrabold text-base shadow-2xl shadow-emerald-500/40 transition-all duration-300 hover:-translate-y-1 group border border-emerald-300/30"
             >
               <WhatsAppIcon className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
-              <span>QUERO COMEÇAR A PARCELAR NO PIX</span>
+              <span>QUERO COMEÇAR A PARCELAR ANTES DA CIRURGIA</span>
               <ArrowRight className="w-5 h-5 text-emerald-200 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
@@ -133,7 +133,7 @@ const STEPS = [
   {
     num: '02', icon: <BadgePercent className="w-7 h-7" />, color: 'teal',
     title: 'Faça o primeiro depósito',
-    desc: 'Com uma pequena entrada via PIX, você inicia o processo. Não há valor mínimo mensal fixo — deposite conforme sua disponibilidade.',
+    desc: 'Com uma pequena entrada, você inicia o processo. Não há valor mínimo mensal fixo — deposite conforme sua disponibilidade, pelo método de sua preferência.',
   },
   {
     num: '03', icon: <CalendarCheck2 className="w-7 h-7" />, color: 'sky',
@@ -275,7 +275,7 @@ function Advantages() {
 // FAQ
 // ──────────────────────────────────────────────────────────
 const FAQS = [
-  { q: 'O que é a Cirurgia Programada no PIX?', a: 'É uma modalidade de pagamento antecipado onde você deposita via PIX os valores do seu procedimento parcelados no seu ritmo, sem valor mínimo mensal fixo e sem necessidade de cartão de crédito ou aprovação de crédito.' },
+  { q: 'O que é a Cirurgia Programada?', a: 'É uma modalidade de pagamento antecipado: você parcela previamente o valor do procedimento — antes da cirurgia — no seu próprio ritmo, sem valor mínimo mensal fixo e sem necessidade de cartão de crédito ou aprovação de crédito.' },
   { q: 'Qual o valor mínimo para começar?', a: 'Não há um valor mínimo obrigatório para o primeiro depósito. O importante é dar o primeiro passo. Fale com nossa equipe para receber um orçamento e traçar seu plano personalizado.' },
   { q: 'Quando posso agendar a data da cirurgia?', a: 'Assim que 10% do orçamento total for pago, você já pode agendar a data do procedimento junto com a equipe da clínica do Dr. Wilson.' },
   { q: 'Com qual percentual realizo a cirurgia?', a: 'A cirurgia é realizada quando o saldo acumulado atingir 85% do orçamento combinado. O restante (15%) pode ser quitado em até 12x no cartão de crédito.' },
