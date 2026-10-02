@@ -230,7 +230,7 @@ function HowItWorks() {
 const ADVANTAGES = [
   { icon: <Lock className="w-6 h-6" />, title: 'Sem análise de crédito', desc: 'Diferente de financeiras e cartões, a Cirurgia Programada não exige score de crédito ou CPF aprovado.' },
   { icon: <Users className="w-6 h-6" />, title: 'Sem avalista', desc: 'Não é necessário apresentar fiador. O compromisso é exclusivamente seu, com total autonomia.' },
-  { icon: <Wallet className="w-6 h-6" />, title: 'Você define o ritmo', desc: 'Deposite o valor que couber: R$ 200, R$ 500, R$ 1.000 — sem valor mínimo mensal fixo.' },
+  { icon: <Wallet className="w-6 h-6" />, title: 'Flexibilidade no pagamento', desc: 'O plano de depósitos é definido junto com nossa equipe, de forma personalizada e adaptada à sua realidade financeira.' },
   { icon: <CalendarCheck2 className="w-6 h-6" />, title: 'Data garantida com 10%', desc: 'Com apenas 10% pago, você agenda a data da cirurgia e tem a confirmação do procedimento.' },
   { icon: <ShieldCheck className="w-6 h-6" />, title: 'Segurança total', desc: 'Todos os valores depositados ficam registrados e alocados ao seu procedimento, com comprovante a cada depósito.' },
   { icon: <Star className="w-6 h-6" />, title: 'Mesmo padrão de excelência', desc: 'A modalidade de pagamento não altera em nada a qualidade do atendimento e do procedimento com o Dr. Wilson.' },
